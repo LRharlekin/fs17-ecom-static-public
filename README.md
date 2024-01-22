@@ -19,6 +19,8 @@ Create an e-commerce website
   - [x] Create new public repo on GH
   - [x] Add public repo as 2nd remote to local repo `git remote add <public repo namespace> <public repo URL>`
   - [x] Push to public remote `git push <public repo namespace> <branchname>`
+        OR
+  - [x] Set up [multiple push URLs for the same namespace](https://jeffkreeftmeijer.com/git-multiple-remotes/#:~:text=You%20can%20push%20to%20multiple,remote%20with%20multuple%20Push%20URLs.&text=If%20the%20repository%20doesn't,of%20renaming%20an%20existing%20remote.) (e.g. `origin`)
 - [x] add label to your PR
 
 2. HTML and Accessibility
