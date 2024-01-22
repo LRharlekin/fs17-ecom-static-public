@@ -15,11 +15,10 @@ Create an e-commerce website
 
 - [x] create a simple `README` file to introduce yourself
 - [x] submit the assignment by open a pull request (PR)
-- [ ] make the repository public
+- [x] make the repository public
   - [x] Create new public repo on GH
-  - [x] Add public repo as 2nd remote to local repo `git remote add <new namespace> <git-URL>`
-  - [ ] asdf
-  - [ ] asdf
+  - [x] Add public repo as 2nd remote to local repo `git remote add <public repo namespace> <public repo URL>`
+  - [x] Push to public remote `git push <public repo namespace> <branchname>`
 - [x] add label to your PR
 
 2. HTML and Accessibility
