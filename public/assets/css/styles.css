@@ -8,14 +8,16 @@
 }
 
 .hero {
+  /* HELPER - REMOVE LATER: css selector for every second child element inside the main tag */
   background-color: lightblue;
 }
 
 footer {
+  /* HELPER - REMOVE LATER: css selector for every second child element inside the main tag */
   background-color: lightblue;
 }
 
-/* css selector for every second child element inside the main tag */
+/* HELPER - REMOVE LATER: css selector for every second child element inside the main tag */
 main > *:nth-child(odd) {
   background-color: lightgreen;
 }
