@@ -1,3 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+:root {
+  /* primary */
+  --primary-dark-grey: #292929;
+  --primary-green: #163730;
+  --primary-orange: #ea5333;
+  /* secondary*/
+  --secondary-light-grey: #adadad;
+  --secondary-green: #98d7b7;
+  --secondary-orange: #d29766;
+  /* background */
+  --background-white: #f2f2f2;
+  --background-yellow-beige: #f1eeda;
+  --background-dark-grey: var(--primary-dark-grey);
+  --background-light-green: #d4e3d3;
+  --background-algae-blue: #b4cfcf;
+}
+
 .flex-row {
   display: flex;
 }
