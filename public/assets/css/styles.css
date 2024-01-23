@@ -1,0 +1,21 @@
+.flex-row {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  background-color: lightblue;
+}
+
+footer {
+  background-color: lightblue;
+}
+
+/* css selector for every second child element inside the main tag */
+main > *:nth-child(odd) {
+  background-color: lightgreen;
+}

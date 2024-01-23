@@ -2,25 +2,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="public/assets/css/styles.css" />
     <title>Homepage | My Online Shop</title>
   </head>
   <body>
     <header>
-      <div id="admin-tab">
-        <div id="nav-trust-elements">
+      <div id="admin-tab" class="flex-row">
+        <div id="nav-trust-elements" class="flex-row">
           <img src="" alt="climate-friendly" />
 
           <img src="" alt="free-shipping-icon" />
         </div>
         <nav id="admin-nav-items">
-          <ul>
-            <li>user login</li>
-            <li>my orders + cart counter</li>
+          <ul class="flex-row">
+            <li>👤 login</li>
+            <li>🛒 + cart counter (0)</li>
           </ul>
         </nav>
       </div>
       <div id="header-tab" class="sticky">
-        <nav id="nav-items">
+        <nav id="nav-items" class="flex-row">
           <ul>
             <li><a href="#">Shop</a></li>
             <li>
@@ -35,7 +36,12 @@
 
           <ul>
             <li>
-              <div id="currency-picker">Finland (EUR) ▽</div>
+              <select id="country-select">
+                <option>🇫🇮 Finland (EUR)</option>
+                <option>🇩🇰 Denmark (DKK)</option>
+                <option>🇸🇪 Sweden (SEK)</option>
+                <option>🇳🇴 Norway (NOK)</option>
+              </select>
             </li>
             <li>🔎</li>
             <li>🛒 + cart counter (0)</li>
@@ -55,8 +61,8 @@
         </p>
         <button>Get your carry-on</button>
         <button>Explore all bags</button>
+        <a rel="noopener" href="#main">⇩</a>
       </section>
-      <a rel="noopener" href="#main">⇩</a>
     </header>
     <main id="main">
       <section class="most-popular">
@@ -80,7 +86,7 @@
         <h4>What our customers say</h4>
         <p>⭐️⭐️⭐️⭐️⭐️</p>
         <p>1327 reviews</p>
-        <ul class="reviews__list">
+        <ul class="reviews__list flex-row">
           <li>
             <figure class="review">
               <!-- content of each "figure" a.k.a. review is: star rating, date, quoted text, title, image of product -->
@@ -184,10 +190,10 @@
         </ul>
       </section>
       <section class="featured">
-        Featured bento grid (rocka) // build this kit (aquascape shop the look)
         <h2>Aquascape Kits - Shop the Look</h2>
         <button class="open-category">More Kits</button>
-        <ul>
+        <p>Featured bento grid // build this kit (aquascape shop the look)</p>
+        <ul class="flex-row">
           <li>Combo Set 1 Card</li>
           <li>Combo Set 2 Card</li>
           <li>Combo Set 3 Card</li>
@@ -208,7 +214,7 @@
       <section class="category">
         <h2>Popular Live Plants</h2>
         <button class="open-category">Shop All Live Plants</button>
-        <ul>
+        <ul class="flex-row">
           <li>Plant 1 Card</li>
           <li>Plant 2 Card</li>
           <li>Plant 3 Card</li>
@@ -218,7 +224,7 @@
       <section class="category">
         <h2>Popular Live Fish</h2>
         <button class="open-category">Shop All Live Fish</button>
-        <ul>
+        <ul class="flex-row">
           <li>Fish 1 Card</li>
           <li>Fish 2 Card</li>
           <li>Fish 3 Card</li>
@@ -228,7 +234,7 @@
       <section class="category">
         <h2>Popular Hardscape Accessories</h2>
         <button class="open-category">Shop All Accessories</button>
-        <ul>
+        <ul class="flex-row">
           <li>Hardscape Accessory 1 Card</li>
           <li>Hardscape Accessory 2 Card</li>
           <li>Hardscape Accessory 3 Card</li>
@@ -238,7 +244,7 @@
       <section class="category">
         <h2>Popular Fish Tanks</h2>
         <button class="open-category">Shop All Fish Tanks</button>
-        <ul>
+        <ul class="flex-row">
           <li>Tank 1 Card</li>
           <li>Tank 2 Card</li>
           <li>Tank 3 Card</li>
@@ -253,7 +259,7 @@
           <li>Certified for X</li>
         </ul>
         <div class="trust-icons">
-          <ul>
+          <ul class="flex-row">
             <li>secure payments</li>
             <li>24/7 support</li>
             <li>eco certified</li>
@@ -286,40 +292,42 @@
     <footer>
       <div id="footer-logo">Logo + Logotype</div>
       <button class="back-to-top">BACK TO TOP</button>
-      <nav>
-        <span>Shop</span>
-        <ul>
-          <li>Shop Live Fish</li>
-          <li>Shop Live Plants</li>
-          <li>Shop Accessories</li>
-          <li>Shop Kits</li>
-        </ul>
-      </nav>
-      <nav>
-        <span>Company</span>
-        <ul>
-          <li>About Us</li>
-          <li>Team</li>
-          <li>FAQs</li>
-          <li>Careers</li>
-          <li>Press</li>
-          <li>Data & Privacy Policy</li>
-        </ul>
-      </nav>
-      <nav>
-        <span>Help & Support</span>
-        <ul>
-          <li>Track Your Order</li>
-          <li>Delivery Times</li>
-          <li>Shipping Cost Calculator</li>
-          <li>Return Policy</li>
-          <li>Browse Our Knowledge Base</li>
-          <li>Contact Support</li>
-        </ul>
-      </nav>
+      <div class="footer-nav-section flex-row">
+        <nav>
+          <span>Shop</span>
+          <ul>
+            <li>Shop Live Fish</li>
+            <li>Shop Live Plants</li>
+            <li>Shop Accessories</li>
+            <li>Shop Kits</li>
+          </ul>
+        </nav>
+        <nav>
+          <span>Company</span>
+          <ul>
+            <li>About Us</li>
+            <li>Team</li>
+            <li>FAQs</li>
+            <li>Careers</li>
+            <li>Press</li>
+            <li>Data & Privacy Policy</li>
+          </ul>
+        </nav>
+        <nav>
+          <span>Help & Support</span>
+          <ul>
+            <li>Track Your Order</li>
+            <li>Delivery Times</li>
+            <li>Shipping Cost Calculator</li>
+            <li>Return Policy</li>
+            <li>Browse Our Knowledge Base</li>
+            <li>Contact Support</li>
+          </ul>
+        </nav>
+      </div>
       -----
-      <nav class="nav-social">
-        <ul>
+      <nav class="footer__nav-social">
+        <ul class="flex-row">
           <li>TikTok</li>
           <li>Instagram</li>
           <li>Youtube</li>
@@ -327,9 +335,11 @@
           <li>Pinterest</li>
         </ul>
       </nav>
-      <p><a href="#">Privacy Policy</a></p>
-      <p><a href="#">Terms & Conditions</a></p>
-      <p>(c) 2024 Lukas Rappen</p>
+      <ul class="flex-row footer__legal-disclaimers">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li>(c) 2024 Lukas Rappen</li>
+      </ul>
     </footer>
   </body>
 </html>
