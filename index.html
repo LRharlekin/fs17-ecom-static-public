@@ -3,23 +3,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="public/assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,200,0,0"
+    />
     <title>AquaScape | Fish Tanks, Live Fish Online Shop</title>
   </head>
   <body>
-    <header>
-      <div id="admin-tab" class="flex-row">
-        <ul id="nav-trust-elements" class="flex-row">
-          <li>🌱 CO2-neutral packaging</li>
-          <li>🎖 3 x eco-certified</li>
-          <li>🚚 Free shipping over 200€</li>
-        </ul>
-        <nav id="admin-nav-items">
-          <ul class="flex-row">
-            <li>👤 login</li>
-            <li>🛒 + cart counter (0)</li>
-          </ul>
-        </nav>
-      </div>
+    <section class="admin-tab">
+      <ul class="admin-tab__trust-elements">
+        <li class="nav-item">
+          <span class="icon material-symbols-outlined"> eco </span>Carbon
+          Neutral Packaging
+        </li>
+        <li class="nav-item">
+          Free Shipping from € 200
+          <span class="icon material-symbols-outlined"> local_shipping </span>
+        </li>
+      </ul>
+
+      <nav class="admin-tab__nav">
+        <menu class="admin-tab__nav-menu">
+          <li class="admin-tab__nav-item nav-item">
+            <span class="icon material-symbols-outlined"> person </span> Login
+          </li>
+          <li class="admin-tab__nav-item nav-item">
+            <span class="material-symbols-outlined"> shopping_cart </span>
+            <p>Cart</p>
+            <p>
+              <span class="admin-tab__cart-counter">0</span>
+            </p>
+          </li>
+        </menu>
+      </nav>
+    </section>
+
+    <header class="header">
       <div id="header-tab" class="sticky">
         <nav id="nav-items" class="flex-row">
           <ul>
@@ -36,34 +55,40 @@
 
           <ul>
             <li>
-              <select id="country-select" aria-label="Select country and currency">
+              <select
+                id="country-select"
+                aria-label="Select country and currency"
+              >
                 <option value="finland">🇫🇮 Finland (EUR)</option>
                 <option value="denmark">🇩🇰 Denmark (DKK)</option>
                 <option value="sweden">🇸🇪 Sweden (SEK)</option>
                 <option value="norway">🇳🇴 Norway (NOK)</option>
               </select>
             </li>
-            <li>🔎</li>
-            <li>🛒 + cart counter (0)</li>
+            <li><span class="material-symbols-outlined"> search </span></li>
+            <li>
+              <span class="material-symbols-outlined"> shopping_cart </span>
+              <span class="admin-tab__cart-counter">0</span>
+            </li>
           </ul>
         </nav>
       </div>
-      <section class="hero" aria-label="hero">
-        <picture class="hero__background">
-          <source srcset="/path/to/image.webp" type="image/webp" />
-          <img src="/path/to/image.jpg" alt="hero background image" />
-        </picture>
-        <p class="hero__subheading">THE CARRY-ON 3.0</p>
-        <header class="hero__heading">FRICTIONLESS TRAVEL</header>
-        <p class="hero__">
-          You've got better things to do than worry about your bag falling
-          apart. We make gear you can trust - for life.
-        </p>
-        <button>Get your carry-on</button>
-        <button>Explore all bags</button>
-        <a rel="noopener" href="#main">⇩</a>
-      </section>
     </header>
+    <section class="hero" aria-label="hero">
+      <picture class="hero__background">
+        <source srcset="/path/to/image.webp" type="image/webp" />
+        <img src="/path/to/image.jpg" alt="hero background image" />
+      </picture>
+      <p class="hero__subheading">THE CARRY-ON 3.0</p>
+      <header class="hero__heading">FRICTIONLESS TRAVEL</header>
+      <p class="hero__">
+        You've got better things to do than worry about your bag falling apart.
+        We make gear you can trust - for life.
+      </p>
+      <button>Get your carry-on</button>
+      <button>Explore all bags</button>
+      <a rel="noopener" href="#main">⇩</a>
+    </section>
     <main id="main">
       <section class="most-popular">
         most popular / best sellers from each category
@@ -204,32 +229,31 @@
       <section class="newsletter-sign-up">
         <div>deal / offer</div>
         <h2>Sign up for our newsletter</h2>
-          <label for="firstname01">First name:</label>
-          <input
-            type="text"
-            id="firstname01"
-            name="firstname"
-            placeholder="First name"
-            required
-          />
-          <label for="lastname01">Last name:</label>
-          <input
-            type="text"
-            id="lastname01"
-            name="lastname"
-            placeholder="Last name"
-            required
-          />
-          <label for="email01">Email address:</label>
-          <input
-            type="email"
-            id="email01"
-            name="email"
-            placeholder="Your best email address"
-            required
-          />
-          <button type="submit">Submit</button>
-        </form>
+        <label for="firstname01">First name:</label>
+        <input
+          type="text"
+          id="firstname01"
+          name="firstname"
+          placeholder="First name"
+          required
+        />
+        <label for="lastname01">Last name:</label>
+        <input
+          type="text"
+          id="lastname01"
+          name="lastname"
+          placeholder="Last name"
+          required
+        />
+        <label for="email01">Email address:</label>
+        <input
+          type="email"
+          id="email01"
+          name="email"
+          placeholder="Your best email address"
+          required
+        />
+        <button type="submit">Submit</button>
       </section>
       <section id="category-section-01" class="category">
         <h2>Popular Live Plants</h2>
@@ -327,19 +351,27 @@
       </section>
       <section class="app-promo">
         <figure>
-          <img src="" alt="AquaScape mobile app">
+          <img src="" alt="AquaScape mobile app" />
           <figcaption>📱</figcaption>
         </figure>
-        
+
         <p>Keep your fish and live plants happy and healthy</p>
         <h2>Download the new AquaScape App</h2>
         <ul>
-          <li>Receive seasonal tips and reminders based on your purchase history</li>
-          <li>Take pictures of your plants and fish, receive support from the AquaScape AI Assistant</li>
-          <li>Get 10% off your first purchase ordered through our mobile app</li>
+          <li>
+            Receive seasonal tips and reminders based on your purchase history
+          </li>
+          <li>
+            Take pictures of your plants and fish, receive support from the
+            AquaScape AI Assistant
+          </li>
+          <li>
+            Get 10% off your first purchase ordered through our mobile app
+          </li>
         </ul>
         <button>Download Now</button>
-        Mobile app promo</section>
+        Mobile app promo
+      </section>
     </main>
     <footer>
       <div id="footer-logo">Logo + Logotype</div>

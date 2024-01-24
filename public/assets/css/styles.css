@@ -1,23 +1,136 @@
+/* || RESET */
+
 * {
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
 }
 
+button {
+  font: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* || VARIABLES */
+
 :root {
+  /* || COLORS */
   /* primary */
-  --primary-dark-grey: #292929;
-  --primary-green: #163730;
-  --primary-orange: #ea5333;
+  --color-primary-main: #163730;
+  --color-primary-tint: #296659;
+  --color-primary-shade: #112c26;
   /* secondary*/
-  --secondary-light-grey: #adadad;
-  --secondary-green: #98d7b7;
-  --secondary-orange: #d29766;
+  --color-secondary-main: #ea5333;
+  --color-secondary-tint: #ec6246;
+  --color-secondary-shade: #e84321;
+  /* neutral */
+  --color-neutral-grey: #adadad;
+  --color-neutral-green: #98d7b7;
+  --color-neutral-orange: #d29766;
   /* background */
-  --background-white: #f2f2f2;
-  --background-yellow-beige: #f1eeda;
-  --background-dark-grey: var(--primary-dark-grey);
-  --background-light-green: #d4e3d3;
-  --background-algae-blue: #b4cfcf;
+  --color-bg-white: #f2f2f2;
+  --color-bg-beige: #f1eeda;
+  --color-bg-dark-grey: var(--primary-dark-grey);
+  --color-bg-green: #d4e3d3;
+  --color-bg-blue: #b4cfcf;
+  /* font colors */
+  --color-type-dark: #292929;
+  --color-type-light: #f1eeda;
+  --color-type-medium: #686868;
+  --color-type-logotype: #000463;
+}
+
+/* || UTILITY CLASSES */
+
+.underline {
+  text-decoration: underline;
+}
+
+.icon {
+  display: inline-block;
+}
+
+/* || GENERAL STYLES */
+
+html {
+  font-size: 8px;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  gap: 2rem;
+}
+
+/* || BLOCKS */
+
+.admin-tab {
+  background-color: var(--color-bg-green);
+  color: var(--color-type-medium);
+  padding: 2rem 2.5rem 1.5rem;
+  font-size: 1.4rem;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  background-color: var(--color-primary-main);
+}
+
+/* || ELEMENTS */
+/* No standalone meaning - semantically tied to the block */
+/* Does not represent structure (not: header__nav__nav-item__btn) */
+
+.admin-tab__trust-elements {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.admin-tab__nav-menu {
+  display: flex;
+  gap: 2.5rem;
+}
+.nav-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.admin-tab__cart-counter {
+  background-color: var(--color-type-medium);
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  color: var(--color-type-light);
+  text-align: center;
+  vertical-align: middle;
+  line-height: 3rem;
+}
+
+/* || MODIFIERS */
+/* incremental style changes */
+/* Blocks with modifiers */
+
+.btn--secondary {
+  background-color: var(--color-secondary-main);
 }
 
 .flex-row {
