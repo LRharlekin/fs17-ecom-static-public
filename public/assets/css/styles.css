@@ -14,6 +14,10 @@ li {
   list-style-type: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* || VARIABLES */
 
 :root {
@@ -91,6 +95,14 @@ section {
   justify-content: space-between;
 }
 
+.header {
+  background-color: var(--color-bg-beige);
+  color: var(--color-type-dark);
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
 .btn {
   background-color: var(--color-primary-main);
 }
@@ -108,11 +120,28 @@ section {
   display: flex;
   gap: 2.5rem;
 }
+
 .nav-item {
   display: flex;
   gap: 1rem;
   align-items: center;
 }
+.header__main-nav-menu {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.header__logotype {
+  font-family: "Cinzel", serif;
+  color: var(--color-type-logotype);
+  font-size: 5rem;
+}
+
+.header__toolbar-menu {
+  display: flex;
+  gap: 2.5rem;
+}
+
 .admin-tab__cart-counter {
   background-color: var(--color-type-medium);
   display: inline-block;
