@@ -3,6 +3,9 @@
 Hi, I'm Lukas.
 I'm 35 years old and I like coding.
 
+LIVE LINK of deployed project:
+[AquaScape E-Commerce Homepage](https://lrharlekin.github.io/fs17-ecom-static-public/)
+
 ## Week 1 Assignment
 
 This assignment aims to practice HTML, CSS and SASS

@@ -8,5 +8,8 @@
   "scripts": {
     "compile": "sass src/styles/style.scss:src/style.css",
     "compile:watch": "sass --watch src/styles/style.scss:src/style.css"
+  },
+  "dependencies": {
+    "sass": "^1.70.0"
   }
 }
