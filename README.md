@@ -1,8 +1,5 @@
 # Introduction
 
-Hi, I'm Lukas.
-I'm 35 years old and I like coding.
-
 LIVE LINK of deployed project:
 [AquaScape E-Commerce Homepage](https://lrharlekin.github.io/fs17-ecom-static-public/)
 
@@ -44,6 +41,12 @@ Create an e-commerce website
 
 - [ ] Deploy the project
 - [ ] Write a readme file to describe your project with few more details
+
+### Accessibility
+
+Price information accessibility for screen readers
+
+[Mercado Libre Case Study](https://medium.com/mercadolibre-tech/lessons-learned-when-developing-accessibility-in-prices-at-mercado-libre-59fd62fe85cb)
 
 ### Sass Folder Structure
 

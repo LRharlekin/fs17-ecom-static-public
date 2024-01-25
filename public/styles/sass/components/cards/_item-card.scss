@@ -1,0 +1,12 @@
+@use "../../abstracts/mixins" as *;
+@use "../../abstracts/colors" as c;
+
+.category__item-card {
+  // reset-card(justify-content, align-items, bg-color)
+  @include reset-card(center, stretch, c.$bg-beige);
+}
+
+.category__item-description {
+  display: flex;
+  justify-content: space-between;
+}

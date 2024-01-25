@@ -1,0 +1,27 @@
+// buttons abstract: size, border, color, background, font, etc.
+@use "colors" as *;
+
+@mixin reset-button($radius, $bg-color, $text-color, $text-transform) {
+  cursor: pointer;
+  border: solid 1px $type-dark;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  // custom
+  border-radius: $radius;
+  background-color: $bg-color;
+  color: $text-color;
+  text-transform: $text-transform;
+}
+
+@mixin reset-card($justify-content, $align-items, $bg-color, $radius: 1.5rem) {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 1rem 2.5rem;
+  // optional
+  border-radius: $radius;
+  // custom
+  justify-content: $justify-content;
+  align-items: $align-items;
+  background-color: $bg-color;
+}

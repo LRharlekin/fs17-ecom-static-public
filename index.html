@@ -112,6 +112,17 @@
           </li>
         </ul>
       </section>
+      <section id="kits-section" class="featured">
+        <h2>Aquascape Kits - Shop the Look</h2>
+        <button class="open-category">More Kits</button>
+        <p>Featured bento grid // build this kit (aquascape shop the look)</p>
+        <ul class="flex-row">
+          <li>Combo Set 1 Card</li>
+          <li>Combo Set 2 Card</li>
+          <li>Combo Set 3 Card</li>
+          <li>Combo Set 4 Card</li>
+        </ul>
+      </section>
       <section class="reviews">
         <h2>Customer Reviews</h2>
         <h3>What our customers say</h3>
@@ -220,17 +231,6 @@
           </li>
         </ul>
       </section>
-      <section id="kits-section" class="featured">
-        <h2>Aquascape Kits - Shop the Look</h2>
-        <button class="open-category">More Kits</button>
-        <p>Featured bento grid // build this kit (aquascape shop the look)</p>
-        <ul class="flex-row">
-          <li>Combo Set 1 Card</li>
-          <li>Combo Set 2 Card</li>
-          <li>Combo Set 3 Card</li>
-          <li>Combo Set 4 Card</li>
-        </ul>
-      </section>
       <section class="newsletter-sign-up">
         <div>deal / offer</div>
         <h2>Sign up for our newsletter</h2>
@@ -260,44 +260,72 @@
         />
         <button type="submit">Submit</button>
       </section>
-      <section id="category-section-01" class="category">
-        <h2>Popular Live Plants</h2>
-        <button class="open-category">Shop All Live Plants</button>
-        <ul class="flex-row">
-          <li>Plant 1 Card</li>
-          <li>Plant 2 Card</li>
-          <li>Plant 3 Card</li>
-          <li>Plant 4 Card</li>
+      <section class="category">
+        <header class="category__header">
+          <h2 class="category__title">Popular Live Plants</h2>
+          <button class="category__shop-all-button">
+            Shop All Live Plants
+          </button>
+        </header>
+        <ul class="category__gallery">
+          <li class="category__item-card">
+            <picture class="category__item-picture">
+              <source srcset="/path/to/image.webp" type="image/webp" />
+              <img src="/path/to/image.jpg" alt="live plant image" />
+            </picture>
+            <div class="category__item-description">
+              <h3 class="category__item-name">Wendtii 'Grenn Gecko'</h3>
+              <div class="screen-reader-only">22 euros and 99 cents.</div>
+              <div class="category__item-price" aria-hidden="true">
+                <span class="price__currency">€</span>
+                <span class="price__base-units">22</span>
+                <span class="price__separator">.</span>
+                <span class="price__decimals">99</span>
+              </div>
+            </div>
+            <a href="" class="category__item-link item-btn">View Details</a>
+          </li>
+          <li class="category__item-card">Plant 2 Card</li>
+          <li class="category__item-card">Plant 3 Card</li>
+          <li class="category__item-card">Plant 4 Card</li>
         </ul>
       </section>
       <section class="category">
-        <h2>Popular Live Fish</h2>
-        <button class="open-category">Shop All Live Fish</button>
-        <ul class="flex-row">
-          <li>Fish 1 Card</li>
-          <li>Fish 2 Card</li>
-          <li>Fish 3 Card</li>
-          <li>Fish 4 Card</li>
+        <header class="category__header">
+          <h2 class="category__title">Popular Live Fish</h2>
+          <button class="category__shop-all-button">Shop All Live Fish</button>
+        </header>
+        <ul class="category__gallery">
+          <li class="category__item-card">Fish 1 Card</li>
+          <li class="category__item-card">Fish 2 Card</li>
+          <li class="category__item-card">Fish 3 Card</li>
+          <li class="category__item-card">Fish 4 Card</li>
         </ul>
       </section>
       <section class="category">
-        <h2>Popular Hardscape Accessories</h2>
-        <button class="open-category">Shop All Accessories</button>
-        <ul class="flex-row">
-          <li>Hardscape Accessory 1 Card</li>
-          <li>Hardscape Accessory 2 Card</li>
-          <li>Hardscape Accessory 3 Card</li>
-          <li>Hardscape Accessory 4 Card</li>
+        <header class="category__header">
+          <h2 class="category__title">Popular Hardscape Accessories</h2>
+          <button class="category__shop-all-button">
+            Shop All Accessories
+          </button>
+        </header>
+        <ul class="category__gallery">
+          <li class="category__item-card">Hardscape Accessory 1 Card</li>
+          <li class="category__item-card">Hardscape Accessory 2 Card</li>
+          <li class="category__item-card">Hardscape Accessory 3 Card</li>
+          <li class="category__item-card">Hardscape Accessory 4 Card</li>
         </ul>
       </section>
       <section class="category">
-        <h2>Popular Fish Tanks</h2>
-        <button class="open-category">Shop All Fish Tanks</button>
-        <ul class="flex-row">
-          <li>Tank 1 Card</li>
-          <li>Tank 2 Card</li>
-          <li>Tank 3 Card</li>
-          <li>Tank 4 Card</li>
+        <header class="category__header">
+          <h2 class="category__title">Popular Fish Tanks</h2>
+          <button class="category__shop-all-button">Shop All Fish Tanks</button>
+        </header>
+        <ul class="category__gallery">
+          <li class="category__item-card">Tank 1 Card</li>
+          <li class="category__item-card">Tank 2 Card</li>
+          <li class="category__item-card">Tank 3 Card</li>
+          <li class="category__item-card">Tank 4 Card</li>
         </ul>
       </section>
       <section id="about-us-section" class="trust">

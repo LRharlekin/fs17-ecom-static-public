@@ -1,0 +1,7 @@
+@use "../../abstracts/mixins" as *;
+@use "../../abstracts/colors" as *;
+
+.item-btn {
+  // reset-button($radius, $bg-color, $text-color, $text-transform)
+  @include reset-button(1.5rem, $bg-beige, $primary-main, uppercase);
+}
