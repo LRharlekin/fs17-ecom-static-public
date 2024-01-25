@@ -6,10 +6,13 @@
   "author": "andrea <ngocanhhsgs@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "compile": "sass src/styles/style.scss:src/style.css",
-    "compile:watch": "sass --watch src/styles/style.scss:src/style.css"
+    "compile": "sass public/styles/sass/main.scss:public/styles/css/styles.css",
+    "compile:watch": "sass --watch public/styles/sass/main.scss:public/styles/css/styles.css"
   },
   "dependencies": {
     "sass": "^1.70.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
   }
 }

@@ -1,0 +1,14 @@
+/* done >> _layout */
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* done >> _layout */
+section {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  gap: 2rem;
+}

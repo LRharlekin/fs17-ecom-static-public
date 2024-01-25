@@ -1,12 +1,8 @@
-/* || COLORS */
-/* primary */
-/* secondary*/
-/* neutral */
-/* font colors */
-/* backgrounds */
+@use "../abstracts/colors";
+
 .admin-tab {
-  background-color: #d4e3d3;
-  color: #686868;
+  background-color: colors.$bg-green;
+  color: colors.$type-medium;
   padding: 2rem 2.5rem 1.5rem;
   font-size: 1.4rem;
   width: 100vw;
@@ -15,20 +11,21 @@
 }
 
 .header {
-  background-color: #f1eeda;
-  color: #292929;
+  background-color: colors.$bg-beige;
+  color: colors.$type-dark;
   width: 100vw;
   display: flex;
   justify-content: space-between;
 }
 
 .btn {
-  background-color: #163730;
+  background-color: colors.$primary-main;
 }
 
 /* || ELEMENTS */
 /* No standalone meaning - semantically tied to the block */
 /* Does not represent structure (not: header__nav__nav-item__btn) */
+
 .admin-tab__trust-elements {
   display: flex;
   gap: 2.5rem;
@@ -44,7 +41,6 @@
   gap: 1rem;
   align-items: center;
 }
-
 .header__main-nav-menu {
   display: flex;
   gap: 2.5rem;
@@ -52,7 +48,7 @@
 
 .header__logotype {
   font-family: "Cinzel", serif;
-  color: #000463;
+  color: colors.$type-logotype;
   font-size: 5rem;
 }
 
@@ -62,12 +58,12 @@
 }
 
 .admin-tab__cart-counter {
-  background-color: #686868;
+  background-color: colors.$type-medium;
   display: inline-block;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  color: #f1eeda;
+  color: colors.$type-light;
   text-align: center;
   vertical-align: middle;
   line-height: 3rem;
@@ -76,8 +72,9 @@
 /* || MODIFIERS */
 /* incremental style changes */
 /* Blocks with modifiers */
+
 .btn--secondary {
-  background-color: #ea5333;
+  background-color: colors.$secondary-main;
 }
 
 .flex-row {
@@ -93,53 +90,3 @@
   /* HELPER - REMOVE LATER: css selector for every second child element inside the main tag */
   background-color: lightblue;
 }
-
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-flow: column nowrap;
-}
-
-/* done >> _layout */
-main {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-}
-
-/* done >> _layout */
-section {
-  display: grid;
-  grid-template-columns: repeat(12, [col-start] 1fr);
-  gap: 2rem;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-button {
-  font: inherit;
-}
-
-a {
-  text-decoration: none;
-}
-
-html {
-  font-size: 8px;
-  font-family: "Inter", sans-serif;
-}
-
-footer {
-  background-color: #b4cfcf;
-}
-
-main > *:nth-child(odd) {
-  background-color: #d4e3d3;
-}
-
-/*# sourceMappingURL=styles.css.map */

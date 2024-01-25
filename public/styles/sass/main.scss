@@ -1,0 +1,16 @@
+@use "components/components";
+@use "layouts";
+@use "base";
+
+// HELPER - REMOVE LATER
+@use "abstracts/colors" as c;
+
+footer {
+  // HELPER - REMOVE LATER: css selector for every second child element inside the main tag
+  background-color: c.$bg-blue;
+}
+
+// HELPER - REMOVE LATER: css selector for every second child element inside the main tag
+main > *:nth-child(odd) {
+  background-color: c.$bg-green;
+}

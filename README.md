@@ -47,7 +47,7 @@ Create an e-commerce website
 
 ### Sass Folder Structure
 
-A simplified version of the popular 7-1 pattern for structuring SCSS directories was implemented:
+A simplified version of the popular [7-1 pattern](https://sass-guidelin.es/#the-7-1-pattern) for structuring SCSS directories was implemented:
 
 Due to the limited scope of the project, the usual 3 sub-folders _/pages_, _/themes_ or _/vendors_ were not necessary, resulting in the following **4-1 structure**:
 
