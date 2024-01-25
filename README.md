@@ -44,3 +44,43 @@ Create an e-commerce website
 
 - [ ] Deploy the project
 - [ ] Write a readme file to describe your project with few more details
+
+### Sass Folder Structure
+
+A simplified version of the popular 7-1 pattern for structuring SCSS directories was implemented:
+
+Due to the limited scope of the project, the usual 3 sub-folders _/pages_, _/themes_ or _/vendors_ were not necessary, resulting in the following **4-1 structure**:
+
+- **main.scss:** File _only_ contains imports for below partials
+- **/abstracts**: Folder contains SASS abstractions, such as variables, mixins, functions, and other utilities
+- **/base**: Folder contains resets and typography rules
+- **/layout**: Folder contains layout for navigation, header, containers, footer and any grid systems.
+- **/components**: Folder contains resusable components, such as buttons, navbars, cards, etc.
+
+```
+sass/
+|
+|- \main.scss
+|
+|– abstracts/
+| |– \_variables.scss // Sass Variables
+| |– \_functions.scss // Sass Functions
+| |– \_mixins.scss // Sass Mixins
+| |– etc.
+|
+|– base/
+| |– \_reset.scss // Reset/normalize
+| |– \_typography.scss // Typography rules
+|
+|– components/
+| |– \_buttons.scss // Buttons
+| |– \_cards.scss // Cards
+| |– etc.
+|
+|– layout/
+  |– \_navigation.scss // Navigation
+  |– \_grid.scss // Grid system
+  |– \_header.scss // Header
+  |– \_footer.scss // Footer
+  |– etc.
+```
