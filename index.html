@@ -3,14 +3,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="public/styles/css/styles.css" />
+    <!-- pre-connect to Google API -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Icons -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,200,0,0"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Fonts -->
+    <!-- K2D -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=K2D&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Cinzel -->
     <link
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Play -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <title>AquaScape | Fish Tanks, Live Fish Online Shop</title>
@@ -84,14 +98,14 @@
         <source srcset="/path/to/image.webp" type="image/webp" />
         <img src="/path/to/image.jpg" alt="hero background image" />
       </picture>
-      <p class="hero__subheading">THE CARRY-ON 3.0</p>
-      <header class="hero__heading">FRICTIONLESS TRAVEL</header>
+      <p class="hero__subheading">THE PREMIUM ANGELFISH SELECTION</p>
+      <header class="hero__heading">TANK TRANQUILITY</header>
       <p class="hero__">
-        You've got better things to do than worry about your bag falling apart.
-        We make gear you can trust - for life.
+        Experience true serenity in your home: A hand-picked number of rare
+        freshwater angelfish is available now.
       </p>
-      <button>Get your carry-on</button>
-      <button>Explore all bags</button>
+      <button>BUY ANGELFISH</button>
+      <button>SEE ALL LIVE FISH</button>
       <a rel="noopener" href="#main">⇩</a>
     </section>
     <main id="main">
@@ -263,18 +277,28 @@
       <section class="category">
         <header class="category__header">
           <h2 class="category__title">Popular Live Plants</h2>
-          <button class="category__shop-all-button">
+          <a href="" class="category__shop-all-button">
             Shop All Live Plants
-          </button>
+          </a>
         </header>
         <ul class="category__gallery">
           <li class="category__item-card">
             <picture class="category__item-picture">
-              <source srcset="/path/to/image.webp" type="image/webp" />
-              <img src="/path/to/image.jpg" alt="live plant image" />
+              <source
+                srcset="./public/assets/img/products/plant01.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="./public/assets/img/products/plant01.jpg"
+                type="image/jpeg"
+              />
+              <img
+                src="./public/assets/img/products/plant01.jpg"
+                alt="Image of plant 1"
+              />
             </picture>
             <div class="category__item-description">
-              <h3 class="category__item-name">Wendtii 'Grenn Gecko'</h3>
+              <h3 class="category__item-name">Wendtii 'Grenn Gecko' 1</h3>
               <div class="screen-reader-only">22 euros and 99 cents.</div>
               <div class="category__item-price" aria-hidden="true">
                 <span class="price__currency">€</span>
@@ -285,9 +309,141 @@
             </div>
             <a href="" class="category__item-link item-btn">View Details</a>
           </li>
-          <li class="category__item-card">Plant 2 Card</li>
-          <li class="category__item-card">Plant 3 Card</li>
-          <li class="category__item-card">Plant 4 Card</li>
+          <li class="category__item-card">
+            <picture class="category__item-picture">
+              <source
+                srcset="./public/assets/img/products/plant02.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="./public/assets/img/products/plant02.jpg"
+                type="image/jpeg"
+              />
+              <img
+                src="./public/assets/img/products/plant02.jpg"
+                alt="Image of plant 2"
+              />
+            </picture>
+            <div class="category__item-description">
+              <h3 class="category__item-name">Wendtii 'Grenn Gecko' 2</h3>
+              <div class="screen-reader-only">22 euros and 99 cents.</div>
+              <div class="category__item-price" aria-hidden="true">
+                <span class="price__currency">€</span>
+                <span class="price__base-units">22</span>
+                <span class="price__separator">.</span>
+                <span class="price__decimals">99</span>
+              </div>
+            </div>
+            <a href="" class="category__item-link item-btn">View Details</a>
+          </li>
+          <li class="category__item-card">
+            <picture class="category__item-picture">
+              <source
+                srcset="./public/assets/img/products/plant03.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="./public/assets/img/products/plant03.jpg"
+                type="image/jpeg"
+              />
+              <img
+                src="./public/assets/img/products/plant03.jpg"
+                alt="Image of plant 3"
+              />
+            </picture>
+            <div class="category__item-description">
+              <h3 class="category__item-name">Wendtii 'Grenn Gecko' 3</h3>
+              <div class="screen-reader-only">22 euros and 99 cents.</div>
+              <div class="category__item-price" aria-hidden="true">
+                <span class="price__currency">€</span>
+                <span class="price__base-units">22</span>
+                <span class="price__separator">.</span>
+                <span class="price__decimals">99</span>
+              </div>
+            </div>
+            <a href="" class="category__item-link item-btn">View Details</a>
+          </li>
+          <li class="category__item-card">
+            <picture class="category__item-picture">
+              <source
+                srcset="./public/assets/img/products/plant04.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="./public/assets/img/products/plant04.jpg"
+                type="image/jpeg"
+              />
+              <img
+                src="./public/assets/img/products/plant04.jpg"
+                alt="Image of plant 4"
+              />
+            </picture>
+            <div class="category__item-description">
+              <h3 class="category__item-name">Wendtii 'Grenn Gecko' 4</h3>
+              <div class="screen-reader-only">22 euros and 99 cents.</div>
+              <div class="category__item-price" aria-hidden="true">
+                <span class="price__currency">€</span>
+                <span class="price__base-units">22</span>
+                <span class="price__separator">.</span>
+                <span class="price__decimals">99</span>
+              </div>
+            </div>
+            <a href="" class="category__item-link item-btn">View Details</a>
+          </li>
+          <li class="category__item-card">
+            <picture class="category__item-picture">
+              <source
+                srcset="./public/assets/img/products/plant05.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="./public/assets/img/products/plant05.jpg"
+                type="image/jpeg"
+              />
+              <img
+                src="./public/assets/img/products/plant05.jpg"
+                alt="Image of plant 5"
+              />
+            </picture>
+            <div class="category__item-description">
+              <h3 class="category__item-name">Wendtii 'Grenn Gecko' 5</h3>
+              <div class="screen-reader-only">22 euros and 99 cents.</div>
+              <div class="category__item-price" aria-hidden="true">
+                <span class="price__currency">€</span>
+                <span class="price__base-units">22</span>
+                <span class="price__separator">.</span>
+                <span class="price__decimals">99</span>
+              </div>
+            </div>
+            <a href="" class="category__item-link item-btn">View Details</a>
+          </li>
+          <li class="category__item-card">
+            <picture class="category__item-picture">
+              <source
+                srcset="./public/assets/img/products/plant06.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="./public/assets/img/products/plant06.jpg"
+                type="image/jpeg"
+              />
+              <img
+                src="./public/assets/img/products/plant06.jpg"
+                alt="Image of plant 6"
+              />
+            </picture>
+            <div class="category__item-description">
+              <h3 class="category__item-name">Wendtii 'Grenn Gecko' 6</h3>
+              <div class="screen-reader-only">22 euros and 99 cents.</div>
+              <div class="category__item-price" aria-hidden="true">
+                <span class="price__currency">€</span>
+                <span class="price__base-units">22</span>
+                <span class="price__separator">.</span>
+                <span class="price__decimals">99</span>
+              </div>
+            </div>
+            <a href="" class="category__item-link item-btn">View Details</a>
+          </li>
         </ul>
       </section>
       <section class="category">
@@ -296,39 +452,343 @@
           <button class="category__shop-all-button">Shop All Live Fish</button>
         </header>
         <ul class="category__gallery">
-          <li class="category__item-card">Fish 1 Card</li>
-          <li class="category__item-card">Fish 2 Card</li>
-          <li class="category__item-card">Fish 3 Card</li>
-          <li class="category__item-card">Fish 4 Card</li>
+          <li class="category__item-card">
+            <picture class="category__item-picture">
+              <source
+                srcset="./public/assets/img/products/fish01.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="./public/assets/img/products/fish01.jpg"
+                type="image/jpeg"
+              />
+              <img
+                src="./public/assets/img/products/fish01.jpg"
+                alt="Image of fish 01"
+              />
+            </picture>
+            <div class="category__item-description">
+              <h3 class="category__item-name">Fish 1</h3>
+              <div class="screen-reader-only">22 euros and 99 cents.</div>
+              <div class="category__item-price" aria-hidden="true">
+                <span class="price__currency">€</span>
+                <span class="price__base-units">22</span>
+                <span class="price__separator">.</span>
+                <span class="price__decimals">99</span>
+              </div>
+            </div>
+            <a href="" class="category__item-link item-btn">View Details</a>
+          </li>
+          <li class="category__item-card">
+            <picture class="category__item-picture">
+              <source
+                srcset="./public/assets/img/products/fish02.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="./public/assets/img/products/fish02.jpg"
+                type="image/jpeg"
+              />
+              <img
+                src="./public/assets/img/products/fish02.jpg"
+                alt="Image of fish 02"
+              />
+            </picture>
+            <div class="category__item-description">
+              <h3 class="category__item-name">Fish 2</h3>
+              <div class="screen-reader-only">22 euros and 99 cents.</div>
+              <div class="category__item-price" aria-hidden="true">
+                <span class="price__currency">€</span>
+                <span class="price__base-units">22</span>
+                <span class="price__separator">.</span>
+                <span class="price__decimals">99</span>
+              </div>
+            </div>
+            <a href="" class="category__item-link item-btn">View Details</a>
+          </li>
+          <li class="category__item-card">
+            <picture class="category__item-picture">
+              <source
+                srcset="./public/assets/img/products/fish03.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="./public/assets/img/products/fish03.jpg"
+                type="image/jpeg"
+              />
+              <img
+                src="./public/assets/img/products/fish03.jpg"
+                alt="Image of fish 03"
+              />
+            </picture>
+            <div class="category__item-description">
+              <h3 class="category__item-name">Fish 3</h3>
+              <div class="screen-reader-only">22 euros and 99 cents.</div>
+              <div class="category__item-price" aria-hidden="true">
+                <span class="price__currency">€</span>
+                <span class="price__base-units">22</span>
+                <span class="price__separator">.</span>
+                <span class="price__decimals">99</span>
+              </div>
+            </div>
+            <a href="" class="category__item-link item-btn">View Details</a>
+          </li>
+          <li class="category__item-card">
+            <picture class="category__item-picture">
+              <source
+                srcset="./public/assets/img/products/fish04.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="./public/assets/img/products/fish04.jpg"
+                type="image/jpeg"
+              />
+              <img
+                src="./public/assets/img/products/fish04.jpg"
+                alt="Image of fish 04"
+              />
+            </picture>
+            <div class="category__item-description">
+              <h3 class="category__item-name">Fish 4</h3>
+              <div class="screen-reader-only">22 euros and 99 cents.</div>
+              <div class="category__item-price" aria-hidden="true">
+                <span class="price__currency">€</span>
+                <span class="price__base-units">22</span>
+                <span class="price__separator">.</span>
+                <span class="price__decimals">99</span>
+              </div>
+            </div>
+            <a href="" class="category__item-link item-btn">View Details</a>
+          </li>
+          <li class="category__item-card">
+            <picture class="category__item-picture">
+              <source
+                srcset="./public/assets/img/products/fish05.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="./public/assets/img/products/fish05.jpg"
+                type="image/jpeg"
+              />
+              <img
+                src="./public/assets/img/products/fish05.jpg"
+                alt="Image of fish 05"
+              />
+            </picture>
+            <div class="category__item-description">
+              <h3 class="category__item-name">Fish 5</h3>
+              <div class="screen-reader-only">22 euros and 99 cents.</div>
+              <div class="category__item-price" aria-hidden="true">
+                <span class="price__currency">€</span>
+                <span class="price__base-units">22</span>
+                <span class="price__separator">.</span>
+                <span class="price__decimals">99</span>
+              </div>
+            </div>
+            <a href="" class="category__item-link item-btn">View Details</a>
+          </li>
         </ul>
       </section>
       <section class="category">
         <header class="category__header">
-          <h2 class="category__title">Popular Hardscape Accessories</h2>
-          <button class="category__shop-all-button">
-            Shop All Accessories
-          </button>
+          <h2 class="category__title">Hardscapes, Rocks & Woods</h2>
+          <a href="" class="category__shop-all-button">
+            More Aquarium-Friendly Accessories
+          </a>
         </header>
         <ul class="category__gallery">
-          <li class="category__item-card">Hardscape Accessory 1 Card</li>
-          <li class="category__item-card">Hardscape Accessory 2 Card</li>
-          <li class="category__item-card">Hardscape Accessory 3 Card</li>
-          <li class="category__item-card">Hardscape Accessory 4 Card</li>
+          <li class="category__item-card">
+            <picture class="category__item-picture">
+              <source
+                srcset="./public/assets/img/products/hardscape01.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="./public/assets/img/products/hardscape01.jpg"
+                type="image/jpeg"
+              />
+              <img
+                src="./public/assets/img/products/hardscape01.jpg"
+                alt="Image of hardscape 1"
+              />
+            </picture>
+            <div class="category__item-description">
+              <h3 class="category__item-name">Hardscape 1</h3>
+              <div class="screen-reader-only">22 euros and 99 cents.</div>
+              <div class="category__item-price" aria-hidden="true">
+                <span class="price__currency">€</span>
+                <span class="price__base-units">22</span>
+                <span class="price__separator">.</span>
+                <span class="price__decimals">99</span>
+              </div>
+            </div>
+            <a href="" class="category__item-link item-btn">View Details</a>
+          </li>
+          <li class="category__item-card">
+            <picture class="category__item-picture">
+              <source
+                srcset="./public/assets/img/products/hardscape02.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="./public/assets/img/products/hardscape02.jpg"
+                type="image/jpeg"
+              />
+              <img
+                src="./public/assets/img/products/hardscape02.jpg"
+                alt="Image of hardscape 2"
+              />
+            </picture>
+            <div class="category__item-description">
+              <h3 class="category__item-name">Hardscape 2</h3>
+              <div class="screen-reader-only">22 euros and 99 cents.</div>
+              <div class="category__item-price" aria-hidden="true">
+                <span class="price__currency">€</span>
+                <span class="price__base-units">22</span>
+                <span class="price__separator">.</span>
+                <span class="price__decimals">99</span>
+              </div>
+            </div>
+            <a href="" class="category__item-link item-btn">View Details</a>
+          </li>
+          <li class="category__item-card">
+            <picture class="category__item-picture">
+              <source
+                srcset="./public/assets/img/products/hardscape03.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="./public/assets/img/products/hardscape03.jpg"
+                type="image/jpeg"
+              />
+              <img
+                src="./public/assets/img/products/hardscape03.jpg"
+                alt="Image of hardscape 3"
+              />
+            </picture>
+            <div class="category__item-description">
+              <h3 class="category__item-name">Hardscape 3</h3>
+              <div class="screen-reader-only">22 euros and 99 cents.</div>
+              <div class="category__item-price" aria-hidden="true">
+                <span class="price__currency">€</span>
+                <span class="price__base-units">22</span>
+                <span class="price__separator">.</span>
+                <span class="price__decimals">99</span>
+              </div>
+            </div>
+            <a href="" class="category__item-link item-btn">View Details</a>
+          </li>
+          <li class="category__item-card">
+            <picture class="category__item-picture">
+              <source
+                srcset="./public/assets/img/products/hardscape04.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="./public/assets/img/products/hardscape04.jpg"
+                type="image/jpeg"
+              />
+              <img
+                src="./public/assets/img/products/hardscape04.jpg"
+                alt="Image of hardscape 4"
+              />
+            </picture>
+            <div class="category__item-description">
+              <h3 class="category__item-name">Hardscape 4</h3>
+              <div class="screen-reader-only">22 euros and 99 cents.</div>
+              <div class="category__item-price" aria-hidden="true">
+                <span class="price__currency">€</span>
+                <span class="price__base-units">22</span>
+                <span class="price__separator">.</span>
+                <span class="price__decimals">99</span>
+              </div>
+            </div>
+            <a href="" class="category__item-link item-btn">View Details</a>
+          </li>
+          <li class="category__item-card">
+            <picture class="category__item-picture">
+              <source
+                srcset="./public/assets/img/products/hardscape05.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="./public/assets/img/products/hardscape05.jpg"
+                type="image/jpeg"
+              />
+              <img
+                src="./public/assets/img/products/hardscape05.jpg"
+                alt="Image of hardscape 5"
+              />
+            </picture>
+            <div class="category__item-description">
+              <h3 class="category__item-name">Hardscape 5</h3>
+              <div class="screen-reader-only">22 euros and 99 cents.</div>
+              <div class="category__item-price" aria-hidden="true">
+                <span class="price__currency">€</span>
+                <span class="price__base-units">22</span>
+                <span class="price__separator">.</span>
+                <span class="price__decimals">99</span>
+              </div>
+            </div>
+            <a href="" class="category__item-link item-btn">View Details</a>
+          </li>
+          <li class="category__item-card">
+            <picture class="category__item-picture">
+              <source
+                srcset="./public/assets/img/products/hardscape06.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="./public/assets/img/products/hardscape06.jpg"
+                type="image/jpeg"
+              />
+              <img
+                src="./public/assets/img/products/hardscape06.jpg"
+                alt="Image of hardscape 6"
+              />
+            </picture>
+            <div class="category__item-description">
+              <h3 class="category__item-name">Hardscape 6</h3>
+              <div class="screen-reader-only">22 euros and 99 cents.</div>
+              <div class="category__item-price" aria-hidden="true">
+                <span class="price__currency">€</span>
+                <span class="price__base-units">22</span>
+                <span class="price__separator">.</span>
+                <span class="price__decimals">99</span>
+              </div>
+            </div>
+            <a href="" class="category__item-link item-btn">View Details</a>
+          </li>
+          <li class="category__item-card">
+            <picture class="category__item-picture">
+              <source
+                srcset="./public/assets/img/products/hardscape07.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="./public/assets/img/products/hardscape07.jpg"
+                type="image/jpeg"
+              />
+              <img
+                src="./public/assets/img/products/hardscape07.jpg"
+                alt="Image of hardscape 7"
+              />
+            </picture>
+            <div class="category__item-description">
+              <h3 class="category__item-name">Hardscape 7</h3>
+              <div class="screen-reader-only">22 euros and 99 cents.</div>
+              <div class="category__item-price" aria-hidden="true">
+                <span class="price__currency">€</span>
+                <span class="price__base-units">22</span>
+                <span class="price__separator">.</span>
+                <span class="price__decimals">99</span>
+              </div>
+            </div>
+            <a href="" class="category__item-link item-btn">View Details</a>
+          </li>
         </ul>
       </section>
-      <section class="category">
-        <header class="category__header">
-          <h2 class="category__title">Popular Fish Tanks</h2>
-          <button class="category__shop-all-button">Shop All Fish Tanks</button>
-        </header>
-        <ul class="category__gallery">
-          <li class="category__item-card">Tank 1 Card</li>
-          <li class="category__item-card">Tank 2 Card</li>
-          <li class="category__item-card">Tank 3 Card</li>
-          <li class="category__item-card">Tank 4 Card</li>
-        </ul>
-      </section>
-      <section id="about-us-section" class="trust">
+      <section class="trust">
         Trust section
         <ul>
           <li>Arrive alive guarantee</li>
@@ -383,27 +843,40 @@
         <button type="submit">Submit</button>
       </section>
       <section class="app-promo">
-        <figure>
-          <img src="" alt="AquaScape mobile app" />
+        <figure class="app-promo__showcase">
+          <picture class="category__item-picture">
+            <source
+              srcset="./public/assets/img/mobile-app/mobile-app.webp"
+              type="image/webp"
+            />
+            <source
+              srcset="./public/assets/img/mobile-app/mobile-app.jpg"
+              type="image/jpeg"
+            />
+            <img
+              src="./public/assets/img/mobile-app/mobile-app.jpg"
+              alt="AquaScape Mobile App"
+            />
+          </picture>
           <figcaption>📱</figcaption>
         </figure>
-
-        <p>Keep your fish and live plants happy and healthy</p>
-        <h2>Download the new AquaScape App</h2>
-        <ul>
-          <li>
-            Receive seasonal tips and reminders based on your purchase history
-          </li>
-          <li>
-            Take pictures of your plants and fish, receive support from the
-            AquaScape AI Assistant
-          </li>
-          <li>
-            Get 10% off your first purchase ordered through our mobile app
-          </li>
-        </ul>
-        <button>Download Now</button>
-        Mobile app promo
+        <div class="app-promo__text">
+          <p>Keep your fish and live plants happy and healthy</p>
+          <h2>Download the new AquaScape App</h2>
+          <ul>
+            <li>
+              Receive seasonal tips and reminders based on your purchase history
+            </li>
+            <li>
+              Take pictures of your plants and fish, receive support from the
+              AquaScape AI Assistant
+            </li>
+            <li>
+              Get 10% off your first purchase ordered through our mobile app
+            </li>
+          </ul>
+          <a href="">Download Now</a>
+        </div>
       </section>
     </main>
     <footer>

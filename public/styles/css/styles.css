@@ -35,15 +35,6 @@ html {
   justify-content: space-between;
 }
 
-.header {
-  background-color: #f1eeda;
-  color: #292929;
-  width: 100vw;
-  padding: 1rem 2.5rem 0.6rem;
-  display: flex;
-  justify-content: space-between;
-}
-
 .btn {
   background-color: #163730;
 }
@@ -65,22 +56,6 @@ html {
   display: flex;
   gap: 1rem;
   align-items: center;
-}
-
-.header__main-nav-menu {
-  display: flex;
-  gap: 2.5rem;
-}
-
-.header__logotype {
-  font-family: "Cinzel", serif;
-  color: #000463;
-  font-size: 4rem;
-}
-
-.header__toolbar-menu {
-  display: flex;
-  gap: 2.5rem;
 }
 
 .admin-tab__cart-counter {
@@ -114,6 +89,34 @@ html {
 .hero {
   /* HELPER - REMOVE LATER: css selector for every second child element inside the main tag */
   background-color: lightblue;
+}
+
+.header {
+  background-color: #f1eeda;
+  color: #292929;
+  width: 100vw;
+  padding: 1rem 2.5rem 0.6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__main-nav-menu {
+  font-family: "k2d", sans-serif;
+  font-size: 4rem;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.header__logotype {
+  font-family: "cinzel", serif;
+  letter-spacing: 100%;
+  color: #000463;
+  font-size: 4rem;
+}
+
+.header__toolbar-menu {
+  display: flex;
+  gap: 2.5rem;
 }
 
 .item-btn {

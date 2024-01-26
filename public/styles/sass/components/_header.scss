@@ -1,0 +1,30 @@
+@use "../abstracts/colors";
+@use "../abstracts/fonts";
+
+.header {
+  background-color: colors.$bg-beige;
+  color: colors.$type-dark;
+  width: 100vw;
+  padding: 1rem 2.5rem 0.6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__main-nav-menu {
+  font-family: fonts.$title;
+  font-size: 4rem;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.header__logotype {
+  font-family: fonts.$logotype;
+  letter-spacing: 100%;
+  color: colors.$type-logotype;
+  font-size: 4rem;
+}
+
+.header__toolbar-menu {
+  display: flex;
+  gap: 2.5rem;
+}
