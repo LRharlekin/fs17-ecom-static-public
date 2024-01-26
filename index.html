@@ -93,21 +93,32 @@
         </menu>
       </nav>
     </header>
-    <section class="hero" aria-label="hero">
-      <picture class="hero__background">
+    <div class="hero" aria-label="hero">
+      <!-- <picture class="hero__background">
         <source srcset="/path/to/image.webp" type="image/webp" />
         <img src="/path/to/image.jpg" alt="hero background image" />
-      </picture>
-      <p class="hero__subheading">THE PREMIUM ANGELFISH SELECTION</p>
-      <header class="hero__heading">TANK TRANQUILITY</header>
-      <p class="hero__">
-        Experience true serenity in your home: A hand-picked number of rare
-        freshwater angelfish is available now.
-      </p>
-      <button>BUY ANGELFISH</button>
-      <button>SEE ALL LIVE FISH</button>
-      <a rel="noopener" href="#main">⇩</a>
-    </section>
+      </picture> -->
+      <div class="hero__bg">
+        <div class="hero__content">
+          <p class="hero__subheading">THE PREMIUM ANGELFISH SELECTION</p>
+          <header class="hero__heading">TANK TRANQUILITY</header>
+          <p class="hero__tagline">
+            Experience true serenity in your home: A hand-picked number of rare
+            freshwater angelfish is available now.
+          </p>
+          <button>BUY ANGELFISH</button>
+          <button>SEE ALL LIVE FISH</button>
+          <a rel="noopener" href="#main">⇩</a>
+        </div>
+        <div class="hero__image-container">
+          <img
+            class="hero__image"
+            src="./public/assets/img/hero/hero-fish.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
     <main id="main">
       <section class="most-popular">
         most popular / best sellers from each category
@@ -313,7 +324,9 @@
             <picture class="category__item-picture">
               <source
                 srcset="./public/assets/img/products/plant02.webp"
+                srcset="./public/assets/img//hero/hero-bg.jpg"
                 type="image/webp"
+                type="image/jpeg"
               />
               <source
                 srcset="./public/assets/img/products/plant02.jpg"
