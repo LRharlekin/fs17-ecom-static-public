@@ -1,15 +1,5 @@
 @use "../abstracts/colors";
 
-.admin-tab {
-  background-color: colors.$bg-green;
-  color: colors.$type-medium;
-  padding: 1rem 2.5rem 0.6rem;
-  font-size: 1.2rem;
-  width: 100vw;
-  display: flex;
-  justify-content: space-between;
-}
-
 .btn {
   background-color: colors.$primary-main;
 }
@@ -17,34 +7,6 @@
 /* || ELEMENTS */
 /* No standalone meaning - semantically tied to the block */
 /* Does not represent structure (not: header__nav__nav-item__btn) */
-
-.admin-tab__trust-elements {
-  display: flex;
-  gap: 2.5rem;
-}
-
-.admin-tab__nav-menu {
-  display: flex;
-  gap: 2.5rem;
-}
-
-.nav-item {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.admin-tab__cart-counter {
-  background-color: colors.$type-medium;
-  display: inline-block;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  color: colors.$type-light;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 3rem;
-}
 
 /* || MODIFIERS */
 /* incremental style changes */

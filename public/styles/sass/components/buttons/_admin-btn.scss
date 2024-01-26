@@ -1,0 +1,21 @@
+@use "../../abstracts/colors";
+@use "../../abstracts/mixins" as *;
+
+.admin-tab__button {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: colors.$type-medium;
+  font-size: inherit;
+
+  &:hover > .admin-tab__icon {
+    color: colors.$primary-main;
+  }
+
+  &:hover > .admin-tab__cart-counter {
+    background-color: colors.$primary-main;
+  }
+}

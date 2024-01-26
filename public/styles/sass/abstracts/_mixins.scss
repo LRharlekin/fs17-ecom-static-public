@@ -1,9 +1,32 @@
 // buttons abstract: size, border, color, background, font, etc.
 @use "colors" as *;
 
-@mixin reset-button($radius, $bg-color, $text-color, $text-transform) {
+// Modals, Popus, Alerts, etc.
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Clearing floats:
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin reset-button(
+  $radius,
+  $bg-color,
+  $text-color,
+  $text-transform,
+  $border-color: $type-dark
+) {
   cursor: pointer;
-  border: solid 1px $type-dark;
+  border: solid 1px $border-color;
   padding-top: 1rem;
   padding-bottom: 1rem;
   width: 100%;
@@ -24,4 +47,23 @@
   justify-content: $justify-content;
   align-items: $align-items;
   background-color: $bg-color;
+}
+
+@mixin reset-list-item {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+@mixin reset-cart-counter($bg-color: $type-medium) {
+  background-color: $bg-color;
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  color: $type-light;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 3rem;
 }

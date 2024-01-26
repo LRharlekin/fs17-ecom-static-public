@@ -1,8 +1,11 @@
 // abstracts
+
 // base
 @use "base";
 // components
 @use "components/components";
+@use "components/admin-tab";
+@use "components/buttons/admin-btn";
 @use "components/hero";
 @use "components/header";
 @use "components/buttons/item-btn";

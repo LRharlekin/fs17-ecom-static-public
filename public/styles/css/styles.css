@@ -1,6 +1,33 @@
+/* || COLORS */
+/* primary */
+/* secondary*/
+/* neutral */
+/* font colors */
+/* backgrounds */
+/* || SHADOWS */
 html {
   box-sizing: border-box;
   font-size: 8px;
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 52%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 46%;
+  }
+}
+@media (max-width: 37.5em) {
+  html {
+    font-size: 40%;
+  }
+}
+@media (min-width: 112.5em) {
+  html {
+    font-size: 54%;
+  }
 }
 
 *,
@@ -19,12 +46,29 @@ html {
   font-family: "Inter", sans-serif;
 }
 
-/* || COLORS */
-/* primary */
-/* secondary*/
-/* neutral */
-/* font colors */
-/* backgrounds */
+.btn {
+  background-color: #163730;
+}
+
+/* || ELEMENTS */
+/* No standalone meaning - semantically tied to the block */
+/* Does not represent structure (not: header__nav__nav-item__btn) */
+/* || MODIFIERS */
+/* incremental style changes */
+/* Blocks with modifiers */
+.btn--secondary {
+  background-color: #ea5333;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 .admin-tab {
   background-color: #d4e3d3;
   color: #686868;
@@ -35,24 +79,19 @@ html {
   justify-content: space-between;
 }
 
-.btn {
-  background-color: #163730;
-}
-
-/* || ELEMENTS */
-/* No standalone meaning - semantically tied to the block */
-/* Does not represent structure (not: header__nav__nav-item__btn) */
-.admin-tab__trust-elements {
-  display: flex;
-  gap: 2.5rem;
-}
-
+.admin-tab__trust-elements,
 .admin-tab__nav-menu {
   display: flex;
-  gap: 2.5rem;
+  gap: 3rem;
 }
 
-.nav-item {
+.admin-tab__icon {
+  margin-right: -2px;
+}
+
+.admin-tab__trust-element,
+.admin-tab__nav-item {
+  list-style-type: none;
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -70,20 +109,21 @@ html {
   line-height: 3rem;
 }
 
-/* || MODIFIERS */
-/* incremental style changes */
-/* Blocks with modifiers */
-.btn--secondary {
-  background-color: #ea5333;
-}
-
-.flex-row {
+.admin-tab__button {
   display: flex;
+  gap: 1rem;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: #686868;
+  font-size: inherit;
 }
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
+.admin-tab__button:hover > .admin-tab__icon {
+  color: #163730;
+}
+.admin-tab__button:hover > .admin-tab__cart-counter {
+  background-color: #163730;
 }
 
 .hero {
@@ -91,26 +131,60 @@ html {
   width: 100vw;
   position: relative;
   overflow: hidden;
-  background-image: url("../../../assets/img/hero/hero-bg.jpg");
+  background-image: url("/../../../assets/img/hero/hero-bg.jpg");
   background-color: blue;
   background-size: cover;
   background-position: 50% 50%;
 }
 
 .header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 3;
   background-color: #f1eeda;
   color: #292929;
   width: 100vw;
   padding: 1rem 2.5rem 0.6rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1rem 1rem;
 }
 
+@supports (animation-timeline: scroll()) {
+  header {
+    animation: scroll-shadow linear both;
+    animation-timeline: scroll();
+    animation-range: 0ex 5ex;
+  }
+  @keyframes scroll-shadow {
+    from {
+      box-shadow: none;
+    }
+    to {
+      box-shadow: rgba(0, 0, 0, 0.1) 0 1rem 1rem;
+    }
+  }
+}
 .header__main-nav-menu {
   font-family: "k2d", sans-serif;
-  font-size: 4rem;
+  font-size: 3rem;
+  width: 100%;
   display: flex;
-  gap: 2.5rem;
+  justify-content: space-between;
+}
+
+.header__nav-item,
+.header__toolbar-item {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.header__nav-link {
+  color: #292929;
 }
 
 .header__logotype {
@@ -123,6 +197,18 @@ html {
 .header__toolbar-menu {
   display: flex;
   gap: 2.5rem;
+}
+
+.header__cart-counter {
+  background-color: #163730;
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  color: #f1eeda;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 3rem;
 }
 
 .item-btn {
@@ -153,12 +239,18 @@ html {
 }
 
 body {
+  box-sizing: border-box;
   min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
+  padding: 0 3rem;
 }
 
 /* done >> _layout */
+body {
+  overscroll-behavior: none;
+}
+
 main {
   display: flex;
   flex-flow: column nowrap;
@@ -180,6 +272,13 @@ section {
 
 .category__gallery {
   display: flex;
+  overflow-x: scroll;
+  scrollbar-gutter: stable;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.category__gallery::-webkit-scrollbar {
+  display: none;
 }
 
 footer {

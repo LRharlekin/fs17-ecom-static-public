@@ -1,20 +1,60 @@
 @use "../abstracts/colors";
+@use "../abstracts/mixins" as *;
 @use "../abstracts/fonts";
 
 .header {
+  position: sticky;
+  position: -webkit-sticky; // Safari
+  top: 0;
+  z-index: 3;
   background-color: colors.$bg-beige;
   color: colors.$type-dark;
   width: 100vw;
   padding: 1rem 2.5rem 0.6rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  box-shadow: colors.$header-shadow;
 }
+
+// Fade in shadow on scroll when supported
+@supports (animation-timeline: scroll()) {
+  header {
+    animation: scroll-shadow linear both;
+    animation-timeline: scroll();
+    animation-range: 0ex 5ex;
+  }
+
+  @keyframes scroll-shadow {
+    from {
+      box-shadow: none;
+    }
+
+    to {
+      box-shadow: colors.$header-shadow;
+    }
+  }
+}
+
+// .header__main-nav {
+//   width: ;
+// }
 
 .header__main-nav-menu {
   font-family: fonts.$title;
-  font-size: 4rem;
+  font-size: 3rem;
+  width: 100%;
   display: flex;
-  gap: 2.5rem;
+  justify-content: space-between;
+}
+
+.header__nav-item,
+.header__toolbar-item {
+  @include reset-list-item;
+}
+
+.header__nav-link {
+  color: colors.$type-dark;
 }
 
 .header__logotype {
@@ -27,4 +67,8 @@
 .header__toolbar-menu {
   display: flex;
   gap: 2.5rem;
+}
+
+.header__cart-counter {
+  @include reset-cart-counter(colors.$primary-main);
 }

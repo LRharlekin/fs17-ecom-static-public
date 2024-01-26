@@ -1,0 +1,31 @@
+@use "../abstracts/colors";
+@use "../abstracts/mixins" as *;
+
+.admin-tab {
+  background-color: colors.$bg-green;
+  color: colors.$type-medium;
+  padding: 1rem 2.5rem 0.6rem;
+  font-size: 1.2rem;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.admin-tab__trust-elements,
+.admin-tab__nav-menu {
+  display: flex;
+  gap: 3rem;
+}
+
+.admin-tab__icon {
+  margin-right: -2px;
+}
+
+.admin-tab__trust-element,
+.admin-tab__nav-item {
+  @include reset-list-item;
+}
+
+.admin-tab__cart-counter {
+  @include reset-cart-counter;
+}

@@ -1,6 +1,23 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/media-queries" as *;
+
 html {
   box-sizing: border-box;
+
   font-size: 8px;
+
+  @include respond(tablet-landscape) {
+    font-size: 52%;
+  }
+  @include respond(tablet-portrait) {
+    font-size: 46%;
+  }
+  @include respond(phone) {
+    font-size: 40%;
+  }
+  @include respond(large-screen) {
+    font-size: 54%;
+  }
 }
 
 *,

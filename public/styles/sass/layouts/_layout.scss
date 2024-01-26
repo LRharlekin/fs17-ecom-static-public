@@ -1,4 +1,8 @@
 /* done >> _layout */
+body {
+  overscroll-behavior: none;
+}
+
 main {
   display: flex;
   flex-flow: column nowrap;
@@ -20,4 +24,12 @@ section {
 
 .category__gallery {
   display: flex;
+  overflow-x: scroll;
+  scrollbar-gutter: stable;
+  // hide scrollbar for different browsers
+  scrollbar-width: none; // Firefox
+  -ms-overflow-style: none; // IE, Edge
+  &::-webkit-scrollbar {
+    display: none; // Chrome, Safari, Opera
+  }
 }

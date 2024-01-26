@@ -30,29 +30,39 @@
     <title>AquaScape | Fish Tanks, Live Fish Online Shop</title>
   </head>
   <body>
+    <!-- <img src="./public/assets/img/hero/hero-bg.jpg" alt="blue water" /> -->
     <section class="admin-tab">
-      <ul class="admin-tab__trust-elements">
-        <li class="nav-item">
-          <span class="material-symbols-outlined"> eco </span>Carbon Neutral
-          Packaging
+      <ul class="admin-tab__trust-elements" aria-hidden="true">
+        <li class="admin-tab__trust-element">
+          <span class="material-symbols-outlined admin-tab__icon"> eco </span
+          >Carbon Neutral Packaging
         </li>
-        <li class="nav-item">
-          <span class="material-symbols-outlined"> local_shipping </span>
+        <li class="admin-tab__trust-element">
+          <span class="material-symbols-outlined admin-tab__icon">
+            local_shipping
+          </span>
           Free Shipping from € 200
         </li>
       </ul>
 
       <nav class="admin-tab__nav">
         <menu class="admin-tab__nav-menu">
-          <li class="admin-tab__nav-item nav-item">
-            <span class="material-symbols-outlined"> person </span> Login
+          <li class="admin-tab__nav-item">
+            <button class="admin-tab__button">
+              <span class="material-symbols-outlined admin-tab__icon">
+                person
+              </span>
+              Login
+            </button>
           </li>
-          <li class="admin-tab__nav-item nav-item">
-            <span class="material-symbols-outlined"> shopping_cart </span>
-            <p>Cart</p>
-            <p>
+          <li class="admin-tab__nav-item">
+            <button class="admin-tab__button">
+              <span class="material-symbols-outlined admin-tab__icon">
+                shopping_cart
+              </span>
+              Cart
               <span class="admin-tab__cart-counter">0</span>
-            </p>
+            </button>
           </li>
         </menu>
       </nav>
@@ -61,12 +71,27 @@
     <header class="header">
       <nav class="header__main-nav">
         <menu class="header__main-nav-menu">
-          <li><a rel="noopener" href="#category-section-01">Shop</a></li>
-          <li>
-            <a rel="noopener" href="#kits-section">Kits</a>
+          <li class="header__nav-item">
+            <a
+              class="header__nav-link"
+              rel="noopener"
+              href="#category-section-01"
+              >Shop</a
+            >
           </li>
-          <li><a href="#">Pre-Order</a></li>
-          <li><a rel="noopener" href="#about-us-section">About</a></li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" rel="noopener" href="#kits-section"
+              >Kits</a
+            >
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Pre-Order</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" rel="noopener" href="#about-us-section"
+              >About</a
+            >
+          </li>
         </menu>
       </nav>
       <a class="header__home-link" href="#">
@@ -74,7 +99,7 @@
       </a>
       <nav class="header__toolbar">
         <menu class="header__toolbar-menu">
-          <li>
+          <li class="header__toolbar-item">
             <select
               id="country-select"
               aria-label="Select country and currency"
@@ -85,10 +110,20 @@
               <option value="norway">🇳🇴 Norway (NOK)</option>
             </select>
           </li>
-          <li><span class="material-symbols-outlined"> search </span></li>
-          <li>
-            <span class="material-symbols-outlined"> shopping_cart </span>
-            <span class="admin-tab__cart-counter">0</span>
+          <li class="header__toolbar-item">
+            <button class="header__button">
+              <span class="material-symbols-outlined header__icon">
+                search
+              </span>
+            </button>
+          </li>
+          <li class="header__toolbar-item">
+            <button class="header__button">
+              <span class="material-symbols-outlined header__icon">
+                shopping_cart
+              </span>
+              <span class="header__cart-counter">0</span>
+            </button>
           </li>
         </menu>
       </nav>

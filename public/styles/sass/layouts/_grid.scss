@@ -1,0 +1,47 @@
+@use "abstracts/mixins" as *;
+@use "abstracts/variables" as vars;
+
+.row {
+  max-width: vars.$grid-width;
+  margin: 0 auto;
+
+  @include clearfix;
+
+  &:not(:last-child) {
+    margin-bottom: vars.$gutter-vertical;
+
+    @include respond(tablet-portrait) {
+      margin-bottom: vars.$gutter-vertical-small;
+    }
+  }
+
+  @include respond(tablet-portrait) {
+    max-width: 50rem;
+  }
+}
+
+// any class that begins with "col-"
+[class^="col-"] {
+  float: left;
+
+  &:not(:last-child) {
+    margin-right: vars.$gutter-horizontal;
+
+    @include respond(tablet-portrait) {
+      margin-right: 0;
+      margin-bottom: vars.$gutter-vertical;
+    }
+  }
+
+  @include respond(tablet-portrait) {
+    width: 50%;
+  }
+}
+
+.col-1-of-2 {
+  width: calc((100% - #{vars.$gutter-horizontal}) / 2);
+}
+
+.col-1-of-3 {
+  width: calc((100% - 2 * #{vars.$gutter-horizontal}) / 3);
+}
