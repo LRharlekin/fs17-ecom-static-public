@@ -187,6 +187,27 @@ html {
   background-position: top;
 }
 
+.hero__bg {
+  display: grid;
+  grid-template-areas: "empty img" "content img";
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.hero__content {
+  grid-area: content;
+  display: inline;
+  flex-flow: column nowrap;
+  justify-content: end;
+  align-items: flex-start;
+}
+
+.hero__image-container {
+  grid-area: img;
+  display: flex;
+  align-items: center;
+}
+
 .btn {
   background-color: #163730;
 }
@@ -279,20 +300,8 @@ section {
   display: none;
 }
 
-.testing {
-  height: 95vh;
-  width: 100vw;
-  position: relative;
-  overflow: hidden;
-  background-color: green;
-}
-
 footer {
   background-color: #b4cfcf;
-}
-
-main > *:nth-child(odd) {
-  background-color: #d4e3d3;
 }
 
 /*# sourceMappingURL=styles.css.map */

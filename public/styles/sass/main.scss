@@ -16,20 +16,7 @@
 // HELPER - REMOVE LATER
 @use "abstracts/colors" as c;
 
-.testing {
-  height: 95vh;
-  width: 100vw;
-  position: relative;
-  overflow: hidden;
-  background-color: green;
-}
-
 footer {
   // HELPER - REMOVE LATER: css selector for every second child element inside the main tag
   background-color: c.$bg-blue;
-}
-
-// HELPER - REMOVE LATER: css selector for every second child element inside the main tag
-main > *:nth-child(odd) {
-  background-color: c.$bg-green;
 }

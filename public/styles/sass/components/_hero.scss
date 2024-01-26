@@ -11,3 +11,24 @@
   background-size: cover;
   background-position: top;
 }
+
+.hero__bg {
+  display: grid;
+  grid-template-areas: "empty img" "content img";
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.hero__content {
+  grid-area: content;
+  display: inline;
+  flex-flow: column nowrap;
+  justify-content: end;
+  align-items: flex-start;
+}
+
+.hero__image-container {
+  grid-area: img;
+  display: flex;
+  align-items: center;
+}
