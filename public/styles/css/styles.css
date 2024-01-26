@@ -46,29 +46,6 @@ html {
   font-family: "Inter", sans-serif;
 }
 
-.btn {
-  background-color: #163730;
-}
-
-/* || ELEMENTS */
-/* No standalone meaning - semantically tied to the block */
-/* Does not represent structure (not: header__nav__nav-item__btn) */
-/* || MODIFIERS */
-/* incremental style changes */
-/* Blocks with modifiers */
-.btn--secondary {
-  background-color: #ea5333;
-}
-
-.flex-row {
-  display: flex;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
 .admin-tab {
   background-color: #d4e3d3;
   color: #686868;
@@ -124,17 +101,6 @@ html {
 }
 .admin-tab__button:hover > .admin-tab__cart-counter {
   background-color: #163730;
-}
-
-.hero {
-  height: 100vh;
-  width: 100vw;
-  position: relative;
-  overflow: hidden;
-  background-image: url("/../../../assets/img/hero/hero-bg.jpg");
-  background-color: blue;
-  background-size: cover;
-  background-position: 50% 50%;
 }
 
 .header {
@@ -211,6 +177,39 @@ html {
   line-height: 3rem;
 }
 
+.hero {
+  height: 80vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  background: blue url("../../assets/images/hero/hero-bg.jpg");
+  background-size: cover;
+  background-position: top;
+}
+
+.btn {
+  background-color: #163730;
+}
+
+/* || ELEMENTS */
+/* No standalone meaning - semantically tied to the block */
+/* Does not represent structure (not: header__nav__nav-item__btn) */
+/* || MODIFIERS */
+/* incremental style changes */
+/* Blocks with modifiers */
+.btn--secondary {
+  background-color: #ea5333;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 .item-btn {
   cursor: pointer;
   border: solid 1px #292929;
@@ -243,7 +242,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
-  padding: 0 3rem;
 }
 
 /* done >> _layout */
@@ -279,6 +277,14 @@ section {
 }
 .category__gallery::-webkit-scrollbar {
   display: none;
+}
+
+.testing {
+  height: 95vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  background-color: green;
 }
 
 footer {

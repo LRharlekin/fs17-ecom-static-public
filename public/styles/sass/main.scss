@@ -3,11 +3,11 @@
 // base
 @use "base";
 // components
-@use "components/components";
 @use "components/admin-tab";
 @use "components/buttons/admin-btn";
-@use "components/hero";
 @use "components/header";
+@use "components/hero";
+@use "components/components";
 @use "components/buttons/item-btn";
 @use "components/cards/item-card";
 // layouts
@@ -15,6 +15,14 @@
 
 // HELPER - REMOVE LATER
 @use "abstracts/colors" as c;
+
+.testing {
+  height: 95vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  background-color: green;
+}
 
 footer {
   // HELPER - REMOVE LATER: css selector for every second child element inside the main tag
