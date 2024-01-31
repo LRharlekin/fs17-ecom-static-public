@@ -192,25 +192,40 @@
               <div class="reviews__stars-container">
                 <span class="reviews__stars">⭐️⭐️⭐️⭐️⭐️</span>
                 <span class="reviews__date">
-                  <time datetime="2023-01-01T19:00">Jan. 1 2023</time>
+                  <time datetime="2023-01-01T19:00">27/01/2023</time>
                 </span>
               </div>
-              <div class="reviews__content">
-                <header class="reviews__quote-headline">
-                  Really benefited from this
-                </header>
-                <blockquote class="reviews__blockquote">
-                  <p>
-                    I really benefited from this product. blablabla ... Review
-                    content
-                  </p>
-                </blockquote>
-                <!-- Figcaption contains: name, verified purchase -->
-                <figcaption class="reviews__caption">
-                  <p class="reviews__author">John Doe</p>
-                  <p class="reviews__verified">✅ Verified Purchase</p>
-                </figcaption>
-              </div>
+              <picture class="reviews__item-picture">
+                <source
+                  srcset="./public/assets/images/products/plant01.webp"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./public/assets/images/products/plant01.jpg"
+                  type="image/jpeg"
+                />
+                <img
+                  src="./public/assets/images/products/plant01.jpg"
+                  alt="Image of plant 1"
+                />
+              </picture>
+              <header class="reviews__quote-headline">
+                Really benefited from this
+              </header>
+              <blockquote class="reviews__blockquote">
+                <p>
+                  I really benefited from this product. blablabla ... Review
+                  content
+                </p>
+              </blockquote>
+              <!-- Figcaption contains: name, verified purchase -->
+              <figcaption class="reviews__caption">
+                <p class="reviews__author">John Doe</p>
+                <p class="reviews__verified">
+                  <span class="material-symbols-outlined"> verified_user </span>
+                  Verified Purchase
+                </p>
+              </figcaption>
             </figure>
           </li>
           <li class="reviews__item-card">
@@ -928,7 +943,7 @@
     </main>
     <footer>
       <div id="footer-logo">Logo + Logotype</div>
-      <button class="back-to-top">BACK TO TOP</button>
+      <a href="#" class="back-to-top">BACK TO TOP</a>
       <div class="footer-nav-section flex-row">
         <nav>
           <span>Shop</span>

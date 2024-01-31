@@ -6,6 +6,8 @@ html {
 
   font-size: 8px;
 
+  scroll-behavior: smooth;
+
   @include respond(tablet-landscape) {
     font-size: 52%;
   }

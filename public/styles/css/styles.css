@@ -9,6 +9,7 @@
 html {
   box-sizing: border-box;
   font-size: 8px;
+  scroll-behavior: smooth;
 }
 @media (max-width: 75em) {
   html {
@@ -179,7 +180,7 @@ html {
 }
 
 .hero {
-  height: 80vh;
+  min-height: 80vh;
   width: 100vw;
   position: relative;
   overflow: hidden;
@@ -284,17 +285,47 @@ $promo-heading
   gap: 1.5rem;
   justify-content: center;
   align-items: stretch;
-  background-color: #f1eeda;
+  background-color: #d4e3d3;
   scroll-snap-align: start;
 }
 
+.reviews__review {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 1.5rem;
+  grid-template-areas: "stars stars" "title title" "img quote" "img caption";
+}
+
+.reviews__stars-container {
+  grid-area: stars;
+  display: flex;
+  gap: 1ch;
+}
+
+.reviews__date {
+  color: #686868;
+}
+
+.reviews__item-picture {
+  grid-area: img;
+}
+
+.reviews__item-picture > img {
+  inline-size: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
 .reviews__quote-headline {
+  grid-area: title;
   color: #292929;
   font-size: 2rem;
   font-family: "k2d", sans-serif, serif;
 }
 
 .reviews__blockquote {
+  grid-area: quote;
   background: #f9f9f9;
   border-left: 10px solid #ccc;
   margin: 1.5em 10px;
@@ -313,6 +344,21 @@ $promo-heading
 
 .reviews__blockquote > p {
   display: inline;
+}
+
+.reviews__caption {
+  grid-area: caption;
+  font-size: 1.5rem;
+  font-family: "Tahoma", sans-serif, serif;
+}
+
+.reviews__author {
+  color: #686868;
+  font-weight: bold;
+}
+
+.reviews__verified {
+  color: #ea5333;
 }
 
 .category__gallery {
