@@ -9,14 +9,10 @@
 @use "components/hero";
 @use "components/components";
 @use "components/buttons/item-btn";
+@use "components/gallery";
 @use "components/cards/item-card";
 // layouts
 @use "layouts";
 
 // HELPER - REMOVE LATER
-@use "abstracts/colors" as c;
-
-footer {
-  // HELPER - REMOVE LATER: css selector for every second child element inside the main tag
-  background-color: c.$bg-blue;
-}
+@use "abstracts/colors" as *;

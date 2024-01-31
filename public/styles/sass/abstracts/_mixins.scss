@@ -1,5 +1,6 @@
 // buttons abstract: size, border, color, background, font, etc.
 @use "colors" as *;
+@use "variables" as var;
 
 // Modals, Popus, Alerts, etc.
 @mixin absolute-center {
@@ -37,13 +38,20 @@
   text-transform: $text-transform;
 }
 
-@mixin reset-card($justify-content, $align-items, $bg-color, $radius: 1.5rem) {
-  display: flex;
-  flex-flow: column nowrap;
-  padding: 1rem 2.5rem;
+@mixin reset-card(
+  $justify-content,
+  $align-items,
+  $bg-color,
+  $grid-gap,
+  $padding: var.$card-radius-gap,
+  $radius: var.$card-radius-outer
+) {
+  display: grid;
   // optional
+  padding: $padding;
   border-radius: $radius;
   // custom
+  gap: $grid-gap;
   justify-content: $justify-content;
   align-items: $align-items;
   background-color: $bg-color;
@@ -66,4 +74,37 @@
   text-align: center;
   vertical-align: middle;
   line-height: 3rem;
+}
+
+@mixin snap-scroll-x-parent {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: var.$spacer;
+}
+
+@mixin snap-scroll-x-child {
+  scroll-snap-align: start;
+}
+
+@mixin custom-scrollbar-style(
+  $bg-track: $bg-green,
+  $bg-thumb: lighten($primary-tint, 20%),
+  $bg-thumb-border: $bg-green
+) {
+  &::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $bg-track;
+    border-radius: 100vw;
+    margin-block: var.$spacer;
+    margin-inline: var.$spacer;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $bg-thumb;
+    border-radius: 100vw;
+    border: solid 0.1em $bg-thumb-border;
+  }
 }

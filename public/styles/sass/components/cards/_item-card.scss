@@ -1,9 +1,23 @@
 @use "../../abstracts/mixins" as *;
 @use "../../abstracts/colors" as c;
+@use "../../abstracts/variables" as var;
 
 .category__item-card {
   // reset-card(justify-content, align-items, bg-color)
-  @include reset-card(center, stretch, c.$bg-beige);
+  @include reset-card(center, stretch, c.$bg-beige, var.$spacer);
+  @include snap-scroll-x-child;
+}
+
+.category__item-picture {
+  border-radius: var.$card-radius-inner;
+  overflow: hidden;
+  margin-bottom: var.$spacer;
+}
+
+.category__item-picture > img {
+  inline-size: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 
 .category__item-description {

@@ -3,3 +3,10 @@ $grid-width: 114rem;
 $gutter-vertical: 4rem;
 $gutter-vertical-smal: 3rem;
 $gutter-horizontal: 3rem;
+
+// SPACE AND RADIUS
+$spacer: 1.5rem;
+
+$card-radius-outer: 2 * $spacer;
+$card-radius-gap: $spacer;
+$card-radius-inner: $card-radius-outer - $card-radius-gap;
