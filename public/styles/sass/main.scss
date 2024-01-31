@@ -9,8 +9,10 @@
 @use "components/hero";
 @use "components/components";
 @use "components/buttons/item-btn";
-@use "components/gallery";
-@use "components/cards/item-card";
+@use "components/reviews-gallery";
+@use "components/cards/review-card";
+@use "components/product-gallery";
+@use "components/cards/product-card";
 // layouts
 @use "layouts";
 

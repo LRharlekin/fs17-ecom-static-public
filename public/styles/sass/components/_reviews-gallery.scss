@@ -2,19 +2,19 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/media-queries" as *;
 
-.category__gallery {
+.reviews__gallery {
   $spacer-local: var.$spacer;
 
   display: grid;
   gap: $spacer-local;
   padding: 0 $spacer-local $spacer-local;
   grid-auto-flow: column;
-  grid-auto-columns: 23%;
+  grid-auto-columns: 19%;
   @include respond(tablet-landscape) {
-    grid-auto-columns: 31%;
+    grid-auto-columns: 24%;
   }
   @include respond(phone) {
-    grid-auto-columns: 45%;
+    grid-auto-columns: 100%;
   }
 
   overflow-x: auto;
@@ -25,7 +25,7 @@
   //  @include custom-scrollbar-style(transparent, transparent, transparent);
 }
 
-.category__gallery:hover {
-  //  @include custom-scrollbar-style;
+.reviews__gallery:hover {
   scrollbar-gutter: stable;
+  //  @include custom-scrollbar-style;
 }

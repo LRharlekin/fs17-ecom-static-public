@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* || COLORS */
 /* primary */
 /* secondary*/
@@ -119,7 +120,7 @@ html {
 }
 
 @supports (animation-timeline: scroll()) {
-  header {
+  .header {
     animation: scroll-shadow linear both;
     animation-timeline: scroll();
     animation-range: 0ex 5ex;
@@ -243,6 +244,77 @@ html {
   text-transform: uppercase;
 }
 
+.reviews__gallery {
+  display: grid;
+  gap: 1.5rem;
+  padding: 0 1.5rem 1.5rem;
+  grid-auto-flow: column;
+  grid-auto-columns: 19%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 1.5rem;
+  scrollbar-gutter: stable;
+}
+@media (max-width: 75em) {
+  .reviews__gallery {
+    grid-auto-columns: 24%;
+  }
+}
+@media (max-width: 37.5em) {
+  .reviews__gallery {
+    grid-auto-columns: 100%;
+  }
+}
+
+.reviews__gallery:hover {
+  scrollbar-gutter: stable;
+}
+
+/*  
+$body-text 
+$cta 
+$title 
+$promo-heading
+ */
+.reviews__item-card {
+  display: grid;
+  padding: 1.5rem;
+  border-radius: 3rem;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: stretch;
+  background-color: #f1eeda;
+  scroll-snap-align: start;
+}
+
+.reviews__quote-headline {
+  color: #292929;
+  font-size: 2rem;
+  font-family: "k2d", sans-serif, serif;
+}
+
+.reviews__blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "“" "”" "‘" "’";
+}
+
+.reviews__blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+.reviews__blockquote > p {
+  display: inline;
+}
+
 .category__gallery {
   display: grid;
   gap: 1.5rem;
@@ -262,7 +334,7 @@ html {
 }
 @media (max-width: 37.5em) {
   .category__gallery {
-    grid-auto-columns: 45%;
+    grid-auto-columns: 100%;
   }
 }
 
@@ -305,7 +377,6 @@ body {
   flex-flow: column nowrap;
 }
 
-/* done >> _layout */
 body {
   overscroll-behavior: none;
 }
@@ -317,16 +388,13 @@ main {
   align-items: stretch;
 }
 
-/* done >> _layout */
-section {
+.reviews {
   display: grid;
-  grid-template-columns: repeat(12, [col-start] 1fr);
-  gap: 2rem;
 }
 
 .category {
-  display: flex;
-  flex-flow: column nowrap;
+  display: grid;
+  grid-auto-flow: rows;
 }
 
 /*# sourceMappingURL=styles.css.map */

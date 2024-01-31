@@ -1,0 +1,31 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/media-queries" as *;
+
+.category__gallery {
+  $spacer-local: var.$spacer;
+
+  display: grid;
+  gap: $spacer-local;
+  padding: 0 $spacer-local $spacer-local;
+  grid-auto-flow: column;
+  grid-auto-columns: 23%;
+  @include respond(tablet-landscape) {
+    grid-auto-columns: 31%;
+  }
+  @include respond(phone) {
+    grid-auto-columns: 100%;
+  }
+
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  @include snap-scroll-x-parent;
+
+  scrollbar-gutter: stable;
+  //  @include custom-scrollbar-style(transparent, transparent, transparent);
+}
+
+.category__gallery:hover {
+  //  @include custom-scrollbar-style;
+  scrollbar-gutter: stable;
+}

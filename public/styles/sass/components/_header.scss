@@ -19,7 +19,7 @@
 
 // Fade in shadow on scroll when supported
 @supports (animation-timeline: scroll()) {
-  header {
+  .header {
     animation: scroll-shadow linear both;
     animation-timeline: scroll();
     animation-range: 0ex 5ex;

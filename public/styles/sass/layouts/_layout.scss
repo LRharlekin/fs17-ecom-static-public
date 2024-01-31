@@ -1,4 +1,3 @@
-/* done >> _layout */
 body {
   overscroll-behavior: none;
 }
@@ -10,14 +9,17 @@ main {
   align-items: stretch;
 }
 
-/* done >> _layout */
 section {
+  // display: grid;
+  // grid-template-columns: repeat(12, [col-start] 1fr);
+  // gap: 2rem;
+}
+
+.reviews {
   display: grid;
-  grid-template-columns: repeat(12, [col-start] 1fr);
-  gap: 2rem;
 }
 
 .category {
-  display: flex;
-  flex-flow: column nowrap;
+  display: grid;
+  grid-auto-flow: rows;
 }

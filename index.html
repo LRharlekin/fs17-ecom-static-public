@@ -180,12 +180,40 @@
         </ul>
       </section>
       <section class="reviews">
-        <h2>Customer Reviews</h2>
-        <h3>What our customers say</h3>
-        <p>⭐️⭐️⭐️⭐️⭐️</p>
-        <p>1327 reviews</p>
-        <ul class="reviews__list">
-          <li>
+        <header class="reviews__header">
+          <h2 class="reviews__headline">What People Are Saying</h2>
+          <span>⭐️⭐️⭐️⭐️⭐️</span>
+          <span>1327 reviews</span>
+        </header>
+        <ul class="reviews__gallery">
+          <li class="reviews__item-card">
+            <figure class="reviews__review">
+              <!-- content of each "figure" a.k.a. review is: star rating, date, quoted text, title, image of product -->
+              <div class="reviews__stars-container">
+                <span class="reviews__stars">⭐️⭐️⭐️⭐️⭐️</span>
+                <span class="reviews__date">
+                  <time datetime="2023-01-01T19:00">Jan. 1 2023</time>
+                </span>
+              </div>
+              <div class="reviews__content">
+                <header class="reviews__quote-headline">
+                  Really benefited from this
+                </header>
+                <blockquote class="reviews__blockquote">
+                  <p>
+                    I really benefited from this product. blablabla ... Review
+                    content
+                  </p>
+                </blockquote>
+                <!-- Figcaption contains: name, verified purchase -->
+                <figcaption class="reviews__caption">
+                  <p class="reviews__author">John Doe</p>
+                  <p class="reviews__verified">✅ Verified Purchase</p>
+                </figcaption>
+              </div>
+            </figure>
+          </li>
+          <li class="reviews__item-card">
             <figure class="review">
               <!-- content of each "figure" a.k.a. review is: star rating, date, quoted text, title, image of product -->
               <div class="review___stars-container">
@@ -210,7 +238,7 @@
               </figcaption>
             </figure>
           </li>
-          <li>
+          <li class="reviews__item-card">
             <figure class="review">
               <!-- content of each "figure" a.k.a. review is: star rating, date, quoted text, title, image of product -->
               <div class="review___stars-container">
@@ -235,32 +263,7 @@
               </figcaption>
             </figure>
           </li>
-          <li>
-            <figure class="review">
-              <!-- content of each "figure" a.k.a. review is: star rating, date, quoted text, title, image of product -->
-              <div class="review___stars-container">
-                <span class="review__stars">⭐️⭐️⭐️⭐️⭐️</span>
-                <span class="review___date">
-                  <time datetime="2023-01-01T19:00">Jan. 1 2023</time>
-                </span>
-              </div>
-              <header>Really benefited from this</header>
-              <blockquote>
-                <p>
-                  "I really benefited from this product. blablabla ... Review
-                  content"
-                </p>
-              </blockquote>
-              <!-- Figcaption contains: name, verified purchase -->
-              <figcaption>
-                <p><strong>John Doe</strong></p>
-                <div>
-                  <p>✅ Verified Purchase</p>
-                </div>
-              </figcaption>
-            </figure>
-          </li>
-          <li>
+          <li class="reviews__item-card">
             <figure class="review">
               <!-- content of each "figure" a.k.a. review is: star rating, date, quoted text, title, image of product -->
               <div class="review___stars-container">
