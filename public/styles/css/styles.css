@@ -180,8 +180,8 @@ html {
 }
 
 .hero {
-  min-height: 80vh;
-  width: 100vw;
+  min-block-size: 80vh;
+  min-block-size: 80svh;
   position: relative;
   overflow: hidden;
   background: blue url("../../assets/images/hero/hero-bg.jpg");

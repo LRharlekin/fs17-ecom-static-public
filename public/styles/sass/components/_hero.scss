@@ -1,8 +1,8 @@
 @use "../abstracts/colors" as *;
 
 .hero {
-  min-height: 80vh;
-  width: 100vw;
+  min-block-size: 80vh;
+  min-block-size: 80svh;
   position: relative;
 
   overflow: hidden;
