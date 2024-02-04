@@ -112,16 +112,10 @@ html {
   z-index: 3;
   background-color: #f1eeda;
   color: #292929;
-  width: 100vw;
-  padding: 1rem 2.5rem 0.6rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   box-shadow: rgba(0, 0, 0, 0.1) 0 1rem 1rem;
 }
-
 @supports (animation-timeline: scroll()) {
-  .header {
+  .header .header {
     animation: scroll-shadow linear both;
     animation-timeline: scroll();
     animation-range: 0ex 5ex;
@@ -135,11 +129,22 @@ html {
     }
   }
 }
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 0.6rem;
+  max-width: 1200px;
+}
+
 .header__main-nav-menu {
   font-family: "k2d", sans-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   width: 100%;
   display: flex;
+  gap: 3rem;
   justify-content: space-between;
 }
 
@@ -154,6 +159,10 @@ html {
 .header__nav-link {
   color: #292929;
 }
+.header__nav-link:hover {
+  text-decoration: underline 2px;
+  text-underline-offset: 1rem;
+}
 
 .header__logotype {
   font-family: "cinzel", serif;
@@ -165,6 +174,26 @@ html {
 .header__toolbar-menu {
   display: flex;
   gap: 2.5rem;
+}
+
+.header__country-select {
+  background-color: #f1eeda;
+  border: none;
+  color: #686868;
+  cursor: pointer;
+  padding-inline-end: 1.5rem;
+}
+.header__country-select:hover {
+  color: #292929;
+}
+.header__country-select::part(listbox) {
+  background-color: #f1eeda;
+  color: #686868;
+}
+
+.header__country-select > option {
+  background-color: #f1eeda;
+  color: #686868;
 }
 
 .header__cart-counter {
@@ -428,10 +457,17 @@ body {
 }
 
 main {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: [full-width-start] minmax(1.5rem, 1fr) [breakout-start] minmax(0, 120px) [content-start] min(100% - 3rem, 1200px) [content-end] minmax(0, 120px) [breakout-end] minmax(1.5rem, 1fr) [full-width-end];
+}
+
+.newsletter-sign-up {
+  grid-column: breakout;
+  background-color: red;
+}
+
+main > :not(.newsletter-sign-up) {
+  grid-column: content;
 }
 
 .reviews {

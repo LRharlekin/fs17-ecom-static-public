@@ -69,64 +69,71 @@
     </section>
 
     <header class="header">
-      <nav class="header__main-nav">
-        <menu class="header__main-nav-menu">
-          <li class="header__nav-item">
-            <a
-              class="header__nav-link"
-              rel="noopener"
-              href="#category-section-01"
-              >Shop</a
-            >
-          </li>
-          <li class="header__nav-item">
-            <a class="header__nav-link" rel="noopener" href="#kits-section"
-              >Kits</a
-            >
-          </li>
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#">Pre-Order</a>
-          </li>
-          <li class="header__nav-item">
-            <a class="header__nav-link" rel="noopener" href="#about-us-section"
-              >About</a
-            >
-          </li>
-        </menu>
-      </nav>
-      <a class="header__home-link" href="#">
-        <h1 class="header__logotype">AquaScape</h1>
-      </a>
-      <nav class="header__toolbar">
-        <menu class="header__toolbar-menu">
-          <li class="header__toolbar-item">
-            <select
-              id="country-select"
-              aria-label="Select country and currency"
-            >
-              <option value="finland">🇫🇮 Finland (EUR)</option>
-              <option value="denmark">🇩🇰 Denmark (DKK)</option>
-              <option value="sweden">🇸🇪 Sweden (SEK)</option>
-              <option value="norway">🇳🇴 Norway (NOK)</option>
-            </select>
-          </li>
-          <li class="header__toolbar-item">
-            <button class="header__button">
-              <span class="material-symbols-outlined header__icon">
-                search
-              </span>
-            </button>
-          </li>
-          <li class="header__toolbar-item">
-            <button class="header__button">
-              <span class="material-symbols-outlined header__icon">
-                shopping_cart
-              </span>
-              <span class="header__cart-counter">0</span>
-            </button>
-          </li>
-        </menu>
-      </nav>
+      <div class="header__wrapper">
+        <nav class="header__main-nav">
+          <menu class="header__main-nav-menu">
+            <li class="header__nav-item">
+              <a
+                class="header__nav-link"
+                rel="noopener"
+                href="#category-section-01"
+                >Shop</a
+              >
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" rel="noopener" href="#kits-section"
+                >Kits</a
+              >
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Pre-Order</a>
+            </li>
+            <li class="header__nav-item">
+              <a
+                class="header__nav-link"
+                rel="noopener"
+                href="#about-us-section"
+                >About</a
+              >
+            </li>
+          </menu>
+        </nav>
+        <a class="header__home-link" href="#">
+          <h1 class="header__logotype">AquaScape</h1>
+        </a>
+        <nav class="header__toolbar">
+          <menu class="header__toolbar-menu">
+            <li class="header__toolbar-item">
+              <select
+                class="header__country-select"
+                id="country-select"
+                name="country-select"
+                aria-label="Select country and currency"
+              >
+                <option value="finland">🇫🇮 Finland (EUR)</option>
+                <option value="denmark">🇩🇰 Denmark (DKK)</option>
+                <option value="sweden">🇸🇪 Sweden (SEK)</option>
+                <option value="norway">🇳🇴 Norway (NOK)</option>
+              </select>
+            </li>
+            <li class="header__toolbar-item">
+              <button class="header__button">
+                <span class="material-symbols-outlined header__icon">
+                  search
+                </span>
+              </button>
+            </li>
+            <li class="header__toolbar-item">
+              <button class="header__button">
+                <span class="material-symbols-outlined header__icon">
+                  shopping_cart
+                </span>
+                <span class="header__cart-counter">0</span>
+              </button>
+            </li>
+          </menu>
+        </nav>
+      </div>
     </header>
     <div class="hero" aria-label="hero">
       <div class="hero__bg">

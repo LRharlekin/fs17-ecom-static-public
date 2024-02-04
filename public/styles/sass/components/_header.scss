@@ -1,6 +1,10 @@
 @use "../abstracts/colors";
 @use "../abstracts/mixins" as *;
 @use "../abstracts/fonts";
+@use "../abstracts/variables" as var;
+
+$padding-inline: var.$spacer;
+$content-max-width: var.$content-max-width;
 
 .header {
   position: sticky;
@@ -9,43 +13,51 @@
   z-index: 3;
   background-color: colors.$bg-beige;
   color: colors.$type-dark;
-  width: 100vw;
-  padding: 1rem 2.5rem 0.6rem;
+
+  box-shadow: colors.$header-shadow;
+  // Fade in shadow on scroll when supported
+  @supports (animation-timeline: scroll()) {
+    .header {
+      animation: scroll-shadow linear both;
+      animation-timeline: scroll();
+      animation-range: 0ex 5ex;
+    }
+
+    @keyframes scroll-shadow {
+      from {
+        box-shadow: none;
+      }
+
+      to {
+        box-shadow: colors.$header-shadow;
+      }
+    }
+  }
+}
+
+.header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: colors.$header-shadow;
+  margin: 0 auto;
+  padding: 1rem $padding-inline 0.6rem;
+  max-width: $content-max-width;
 }
 
-// Fade in shadow on scroll when supported
-@supports (animation-timeline: scroll()) {
-  .header {
-    animation: scroll-shadow linear both;
-    animation-timeline: scroll();
-    animation-range: 0ex 5ex;
-  }
-
-  @keyframes scroll-shadow {
-    from {
-      box-shadow: none;
-    }
-
-    to {
-      box-shadow: colors.$header-shadow;
-    }
+.header__main-nav {
+  &-menu {
+    font-family: fonts.$title;
+    font-size: 2rem;
+    width: 100%;
+    display: flex;
+    gap: calc($padding-inline * 2);
+    justify-content: space-between;
   }
 }
 
-// .header__main-nav {
-//   width: ;
-// }
-
-.header__main-nav-menu {
-  font-family: fonts.$title;
-  font-size: 3rem;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+.header__toolbar {
+  // grid-column: content;
+  // place-self: end / center;
 }
 
 .header__nav-item,
@@ -55,6 +67,15 @@
 
 .header__nav-link {
   color: colors.$type-dark;
+  &:hover {
+    text-decoration: underline 2px;
+    text-underline-offset: 1rem;
+  }
+}
+
+.header__home-link {
+  // grid-column: content;
+  // place-self: center;
 }
 
 .header__logotype {
@@ -67,6 +88,26 @@
 .header__toolbar-menu {
   display: flex;
   gap: 2.5rem;
+}
+
+.header__country-select {
+  background-color: colors.$bg-beige;
+  border: none;
+  color: colors.$type-medium;
+  cursor: pointer;
+  padding-inline-end: $padding-inline;
+  &:hover {
+    color: colors.$type-dark;
+  }
+  &::part(listbox) {
+    background-color: colors.$bg-beige;
+    color: colors.$type-medium;
+  }
+}
+
+.header__country-select > option {
+  background-color: colors.$bg-beige;
+  color: colors.$type-medium;
 }
 
 .header__cart-counter {

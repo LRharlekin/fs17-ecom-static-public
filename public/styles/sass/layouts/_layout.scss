@@ -1,15 +1,46 @@
+@use "../abstracts/media-queries" as *;
+@use "../abstracts/variables" as var;
+
 body {
   overscroll-behavior: none;
 }
 
 main {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: stretch;
+  // display: flex;
+  // flex-flow: column nowrap;
+  // justify-content: center;
+  // align-items: stretch;
+
+  $padding-inline: var.$spacer;
+
+  $content-max-width: var.$content-max-width;
+  $breakout-max-width: 1440px;
+
+  $full-bleed-col: minmax($padding-inline, 1fr);
+  $breakout-col: calc(($breakout-max-width - $content-max-width) / 2);
+
+  display: grid;
+  grid-template-columns:
+    [full-width-start]
+    $full-bleed-col
+    [breakout-start]
+    minmax(0, $breakout-col)
+    [content-start]
+    min(calc(100% - $padding-inline * 2), $content-max-width)
+    [content-end]
+    minmax(0, $breakout-col)
+    [breakout-end]
+    $full-bleed-col
+    [full-width-end];
 }
 
-section {
+.newsletter-sign-up {
+  grid-column: breakout;
+  background-color: red;
+}
+
+main > :not(.newsletter-sign-up) {
+  grid-column: content;
   // display: grid;
   // grid-template-columns: repeat(12, [col-start] 1fr);
   // gap: 2rem;

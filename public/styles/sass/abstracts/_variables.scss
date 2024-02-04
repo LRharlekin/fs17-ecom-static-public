@@ -7,6 +7,8 @@ $gutter-horizontal: 3rem;
 // SPACE AND RADIUS
 $spacer: 1.5rem;
 
+$content-max-width: 1200px;
+
 $card-radius-outer: 2 * $spacer;
 $card-radius-gap: $spacer;
 $card-radius-inner: $card-radius-outer - $card-radius-gap;
